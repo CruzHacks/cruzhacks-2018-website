@@ -1,0 +1,111 @@
+@import './normalize.css';
+@font-face {
+  font-family: 'Bariol';
+  font-weight: bold;
+  font-style: normal;
+  src: url('./fonts/bariol_bold-webfont.woff2'), url('./fonts/bariol_bold-webfont.woff');
+}
+
+@font-face {
+  font-family: 'Bariol';
+  font-weight: bold;
+  font-style: italic;
+  src: url('./fonts/bariol_bold_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_bold_italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bariol';
+  font-weight: 100;
+  font-style: normal;
+  src: url('./fonts/bariol_light-webfont.woff2') format('woff2'), url('./fonts/bariol_light-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bariol';
+  font-weight: 100;
+  font-style: italic;
+  src: url('./fonts/bariol_light_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_light_italic-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bariol';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/bariol_regular-webfont.woff2') format('woff2'), url('./fonts/bariol_regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bariol';
+  font-weight: normal;
+  font-style: italic;
+  src: url('./fonts/bariol_regular_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_regular_italic-webfont.woff') format('woff');
+}
+
+$font-stack: 'Bariol',
+Helvetica,
+sans-serif;
+$br-small: 640px;
+$br-medium: 900px;
+$br-large: 1500px;
+$black: #222;
+body {
+  font: 17px/1.3 $font-stack;
+  @media (max-width: $br-small) {
+    font-size: 1.25rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  color: $black;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+h4 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1em;
+}
+
+h5 {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+main {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &--text {
+    width: 500px;
+    text-align: center;
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+}
