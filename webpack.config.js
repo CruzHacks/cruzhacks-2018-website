@@ -1,5 +1,5 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
@@ -20,7 +20,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: [{
+            loader: 'babel-loader'
+          }
+          /*, {
+                    loader: 'eslint-loader',
+                    options: {
+                      emitWarning: true
+                    }
+                  }*/
+        ]
       },
       {
         test: /\.(png|woff(2)?|svg)$/,
@@ -50,6 +59,6 @@ module.exports = {
         }
       }
     }),
-    new UglifyJSPlugin()
+    //new UglifyJSPlugin()
   ]
 }

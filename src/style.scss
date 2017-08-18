@@ -49,6 +49,9 @@ $br-medium: 900px;
 $br-large: 1500px;
 $black: #222;
 body {
+  box-sizing: border-box;
+  height: 100vh;
+  border: 20px rgba(144, 122, 254, 0.20) solid;
   font: 17px/1.3 $font-stack;
   @media (max-width: $br-small) {
     font-size: 1.25rem;
@@ -65,12 +68,12 @@ h5 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.7em;
   line-height: 1.02;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: normal;
 }
 
@@ -104,8 +107,40 @@ main {
   &--text {
     width: 500px;
     text-align: center;
+    img {
+      margin-bottom: 40px;
+    }
     h1 {
       margin-bottom: 30px;
     }
   }
+}
+
+#circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 850px;
+  height: 850px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 325px;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.sketch {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  opacity: .2
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(3px);
 }
