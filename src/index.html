@@ -12,11 +12,42 @@
 
 <body>
   <main>
+    <header>
+      <a href="./">
+        cruzhacks
+      </a>
+      <nav>
+        <ul class="hide-mobile">
+          <li><a href="./about">About</a></li>
+          <li><a href="./schedule">Schedule</a></li>
+          <li><a href="./sponsors">Sponsors</a></li>
+          <li><a href="./faq">FAQ</a></li>
+        </ul>
+        <a href="#" class="hamburger">Menu</a>
+      </nav>
+      <div class="mobile-nav hidden">
+        <div class="mobile-nav__wrapper">
+          <a href="./">
+            cruzhacks
+          </a>
+          <a href="#" class="hamburger__close">Close</a>
+          <ul>
+            <li class="mobile-nav__item"><a href="./about">About</a></li>
+            <li class="mobile-nav__item"><a href="./schedule">Schedule</a></li>
+            <li class="mobile-nav__item"><a href="./sponsors">Sponsors</a></li>
+            <li class="mobile-nav__item"><a href="./faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <div class="hero">
       <div class="hero--text">
         <img class="fade-in" src="./src/images/logo.svg">
         <h1 class="fade-in">cruzhacks 2018</h1>
         <h2 class="fade-in">Create, shape, and build with over 700 people in an inclusive melting pot for hackers</h2>
+        <div class="fade-in">
+          <a class="btn--disabled">Apps open in November!</a>
+        </div>
       </div>
     </div>
   </main>

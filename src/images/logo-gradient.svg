@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="109px" viewBox="0 0 130 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="4.00589923%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E8D0FF" offset="0%"></stop>
+            <stop stop-color="#9DC9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Website-Copy" transform="translate(-635.000000, -344.000000)">
+            <g id="Group" transform="translate(635.000000, 347.000000)">
+                <path d="M105.186668,65 L24.8125188,65 C11.1095611,65 0,54.0307256 0,40.499197 C0,26.9684714 11.1095611,16 24.8125188,16 L105.186668,16 C118.890439,16 130,26.9684714 130,40.499197 C130,54.0307256 118.890439,65 105.186668,65" id="Fill-1-Copy" fill="url(#linearGradient-1)" opacity="0.493602808"></path>
+                <polyline id="Stroke-4-Copy" stroke="#222" stroke-width="4.86000006" stroke-linecap="round" stroke-linejoin="round" points="75.4804722 103 54.0163295 103 78.4976078 93.5650295 51 93.5650295 82.0205078 84.9013672"></polyline>
+                <path d="M84.0331337,82.5013681 C85.324346,74.9413022 91.932079,66.9585143 94.9269855,63.6617641 C96.3361644,62.1112487 97.6241668,60.4540502 98.682656,58.6460514 C102.181528,52.6717945 104.134798,45.6820423 103.992757,38.2262531 C103.60435,17.7214293 87.0232251,0.806934814 66.5195114,0.0288696743 C44.2888312,-0.814970045 26,16.948979 26,38.9826608 C26,46.0133216 27.8625879,52.6092284 31.1199097,58.3051465 C32.2562408,60.291218 33.6662222,62.1040295 35.1997877,63.8021366 C38.2508687,67.1799019 44.6940905,75.0463811 45.9668455,82.5013681 C46.2124086,83.9347727 47.4193591,85 48.8734776,85 L81.1265015,85 C82.5806201,85 83.7875706,83.9347727 84.0331337,82.5013681 Z" id="Stroke-6-Copy" stroke="#222" stroke-width="4.86000006" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M65,85 L65,51" id="Stroke-8-Copy" stroke="#222" stroke-width="4.86000006" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M57,40.9995875 C57,36.0295183 61.0295183,32 65.9995875,32 C70.9713068,32 75,36.0295183 75,40.9995875 C75,45.9696567 70.9713068,50 65.9995875,50 C61.0295183,50 57,45.9696567 57,40.9995875 Z" id="Stroke-10-Copy" stroke="#222" stroke-width="4.86000006" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

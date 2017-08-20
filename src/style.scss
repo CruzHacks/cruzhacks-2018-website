@@ -1,60 +1,69 @@
 @import './normalize.css';
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: bold;
   font-style: normal;
-  src: url('./fonts/bariol_bold-webfont.woff2'), url('./fonts/bariol_bold-webfont.woff');
+  src: url('./fonts/GR-Bold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: bold;
   font-style: italic;
-  src: url('./fonts/bariol_bold_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_bold_italic-webfont.woff') format('woff');
+  src: url('./fonts/GR-BoldItalic.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: 100;
   font-style: normal;
-  src: url('./fonts/bariol_light-webfont.woff2') format('woff2'), url('./fonts/bariol_light-webfont.woff') format('woff');
+  src: url('./fonts/GR-Book.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: 100;
   font-style: italic;
-  src: url('./fonts/bariol_light_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_light_italic-webfont.woff') format('woff');
+  src: url('./fonts/GR-BookItalic.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/bariol_regular-webfont.woff2') format('woff2'), url('./fonts/bariol_regular-webfont.woff') format('woff');
+  src: url('./fonts/GR-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bariol';
+  font-family: 'GR';
   font-weight: normal;
   font-style: italic;
-  src: url('./fonts/bariol_regular_italic-webfont.woff2') format('woff2'), url('./fonts/bariol_regular_italic-webfont.woff') format('woff');
+  src: url('./fonts/GR-MediumItalic.woff') format('woff');
 }
 
-$font-stack: 'Bariol',
+$font-stack: 'GR',
 Helvetica,
 sans-serif;
 $br-small: 640px;
 $br-medium: 900px;
 $br-large: 1500px;
 $black: #222;
+$purple: #E8D0FF;
+@mixin prefix($property,
+$val) {
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
 body {
   box-sizing: border-box;
   height: 100vh;
   border: 20px rgba(144, 122, 254, 0.20) solid;
   font: 17px/1.3 $font-stack;
   @media (max-width: $br-small) {
-    font-size: 1.25rem;
+    font-size: .9rem;
   }
 }
 
@@ -70,11 +79,12 @@ h5 {
 h1 {
   font-size: 2.7em;
   line-height: 1.02;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 1.6em;
-  font-weight: normal;
+  font-weight: 100;
 }
 
 h3 {
@@ -94,9 +104,113 @@ h5 {
   font-size: 0.8em;
 }
 
+header {
+  width: 700px;
+  margin: 10px auto;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $br-medium) {
+    margin: 30px auto;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+    font-size: 1.3em;
+  }
+}
+
 main {
   width: 700px;
   margin: 0 auto;
+  @media (max-width: $br-small) {
+    width: 85%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  box-shadow: inset 0 -9px 0 0 lighten($purple, 10%);
+  transition: color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.nav-link {
+  box-shadow: none;
+  text-transform: lowercase;
+  &:hover {
+    color: lighten($black, 14%);
+    box-shadow: none;
+  }
+}
+
+nav {
+  >a:last-child {
+    padding-right: 0;
+  }
+  ul {
+    li {
+      font-size: 0.9em;
+      display: inline-block;
+      &:last-child a {
+        padding-right: 0;
+      }
+      a {
+        @extend .nav-link;
+        padding: 10px 31px;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  background-color: rgba(255, 255, 255, 0.90);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li:first-child {
+      padding-top: 60px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 70%;
+    margin: 50px auto;
+  }
+  &__item {
+    padding: 15px 0;
+    list-style: none;
+    a {
+      display: block;
+      position: relative;
+      font-size: 1.3em;
+      @media (max-height: 654px) {
+        font-size: 1em;
+      }
+      @extend .nav-link;
+    }
+  }
+}
+
+.hamburger {
+  @extend .nav-link;
+  @media (min-width: $br-medium) {
+    display: none;
+  }
+  &__close {
+    @extend .nav-link;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .hero {
@@ -105,14 +219,54 @@ main {
   align-items: center;
   justify-content: center;
   &--text {
-    width: 500px;
+    z-index: -1;
+    width: 400px;
     text-align: center;
     img {
-      margin-bottom: 40px;
-    }
-    h1 {
+      width: 110px;
+      height: 89px;
       margin-bottom: 30px;
     }
+    h2 {
+      margin: 30px 0 35px;
+      font-size: 1.3em;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: 1px #efefef solid;
+  cursor: pointer;
+  @include prefix(user-select,
+  none);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .02);
+  transition: transform 0.5s ease, box-shadow 1s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .04);
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .04);
+  }
+  &--cta {
+    @extend .btn;
+    color: darken($purple, 10%);
+    border: 2px $purple solid;
+  }
+  &--disabled {
+    @extend .btn;
+    cursor: default;
+    box-shadow: none;
+    display: inline;
+    text-transform: uppercase;
+    color: darken($purple, 10%);
+    border: 2px $purple solid;
   }
 }
 
@@ -129,12 +283,21 @@ main {
   opacity: 1;
   border-radius: 325px;
   filter: blur(100px);
-  z-index: -1;
+  z-index: -2;
+  @media(max-width: $br-medium) {
+    border-radius: 0;
+    width: 80%;
+    height: 80%;
+    filter: blur(90px);
+  }
+  @media(max-width: $br-small) {
+    width: 100%;
+  }
 }
 
 .sketch {
   position: absolute;
-  z-index: -2;
+  z-index: -3;
   top: 0;
   left: 0;
   opacity: .2
@@ -143,4 +306,23 @@ main {
 .fade-in {
   opacity: 0;
   transform: translateY(3px);
+}
+
+::selection {
+  background: $purple;
+}
+
+::-moz-selection {
+  background: $purple;
+}
+
+@media (max-width: $br-medium) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }

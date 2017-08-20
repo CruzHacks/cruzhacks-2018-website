@@ -9,13 +9,32 @@ require('./style.scss')
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-sequences */
 
+var menu = document.getElementsByClassName('hamburger')[0]
+var close = document.getElementsByClassName('hamburger__close')[0]
+var mobileNav = document.getElementsByClassName('mobile-nav')[0]
+
+menu.addEventListener('click', (e) => {
+  e.preventDefault()
+  menu.classList.add('hidden')
+  mobileNav.classList.remove('hidden')
+  TweenMax.staggerFrom('.mobile-nav__item', 0.5, {
+    y: -15,
+    opacity: 0
+  }, 0.06)
+})
+
+close.addEventListener('click', (e) => {
+  e.preventDefault()
+  menu.classList.remove('hidden')
+  mobileNav.classList.add('hidden')
+})
+
 TweenMax.delayedCall(0.2, () => {
   TweenMax.staggerTo('.fade-in', 0.5, {
     opacity: 1,
     y: 0
   }, 0.2)
 })
-
 
 function Particle(x, y, radius, lifespan, speed) {
   this.init(x, y, radius, lifespan, speed)
