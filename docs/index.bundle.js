@@ -8021,6 +8021,26 @@ __webpack_require__(0);
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-sequences */
 
+var menu = document.getElementsByClassName('hamburger')[0];
+var close = document.getElementsByClassName('hamburger__close')[0];
+var mobileNav = document.getElementsByClassName('mobile-nav')[0];
+
+menu.addEventListener('click', e => {
+  e.preventDefault();
+  menu.classList.add('hidden');
+  mobileNav.classList.remove('hidden');
+  __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].staggerFrom('.mobile-nav__item', 0.5, {
+    y: -15,
+    opacity: 0
+  }, 0.06);
+});
+
+close.addEventListener('click', e => {
+  e.preventDefault();
+  menu.classList.remove('hidden');
+  mobileNav.classList.add('hidden');
+});
+
 __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].delayedCall(0.2, () => {
   __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].staggerTo('.fade-in', 0.5, {
     opacity: 1,
