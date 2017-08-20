@@ -3,6 +3,7 @@ import {
 } from 'gsap'
 
 require('./style.scss')
+var Sketch = require('./sketch.min.js')
 
 /* eslint-disable no-undef */
 /* eslint-disable space-before-function-paren */
@@ -105,17 +106,27 @@ var demo = Sketch.create({
 })
 
 demo.setup = function () {
-  var x, y
+  var x, y, spawn_circles
   var spawn_radius = 400
   var center_x = demo.width * 0.5
   var center_y = demo.height * 0.5
-  setInterval(() => {
-    var angle = 2 * PI * random()
-    var r = spawn_radius * random()
-    x = 1.6 * r * cos(angle) + center_x
-    y = 0.9 * r * sin(angle) + center_y
-    demo.spawn(x, y, random(0.5, 9.0), random(COLOURS), random(15, 55), 10, 0.05)
-  }, 300)
+
+  function spawnCircles() {
+    spawn_circles = setInterval(() => {
+      var angle = 2 * PI * random()
+      var r = spawn_radius * random()
+      x = 1.6 * r * cos(angle) + center_x
+      y = 0.9 * r * sin(angle) + center_y
+      demo.spawn(x, y, random(0.5, 9.0), random(COLOURS), random(15, 55), 10, 0.05)
+    }, 300)
+  }
+  spawnCircles()
+
+  window.addEventListener('focus', spawnCircles)
+  window.addEventListener('blur', () => {
+    clearInterval(spawn_circles)
+  })
+
 }
 
 demo.spawn = function (x, y, wander, color, radius, lifespan, speed) {

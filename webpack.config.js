@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.(png|woff(2)?|svg)$/,
-        loader: 'url-loader?limit=100000'
+        loader: 'file-loader'
       }
     ]
   },
