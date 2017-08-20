@@ -13,6 +13,8 @@ var Sketch = require('./sketch.min.js')
 var menu = document.getElementsByClassName('hamburger')[0]
 var close = document.getElementsByClassName('hamburger__close')[0]
 var mobileNav = document.getElementsByClassName('mobile-nav')[0]
+var header = document.getElementsByClassName('header--wrapper')[0]
+var body = document.getElementsByTagName('body')[0]
 
 menu.addEventListener('click', (e) => {
   e.preventDefault()
@@ -169,3 +171,30 @@ demo.draw = function () {
     particles[i].draw(demo)
   }
 }
+
+var scrollpos = 0;
+var active = false;
+
+function scrollHandler(scrollpos) {
+  console.log(scrollpos)
+  if (scrollpos > 40) {
+    header.style.height = '50px'
+    body.style.border = '0 rgba(144, 122, 254, 0.20) solid'
+  } else if (scrollpos <= 20) {
+    header.style.height = '75px'
+    body.style.transform = 'all .2s ease'
+    body.style.border = '20px rgba(144, 122, 254, 0.20) solid'
+    body.style.borderBottom = '0'
+  }
+}
+
+window.addEventListener('scroll', function (e) {
+  scrollpos = window.scrollY;
+  if (!active) {
+    window.requestAnimationFrame(function () {
+      scrollHandler(scrollpos);
+      active = false;
+    });
+  }
+  active = true;
+});
