@@ -48,7 +48,8 @@ $br-small: 640px;
 $br-medium: 900px;
 $br-large: 1500px;
 $black: #222;
-$purple: #E8D0FF;
+$blue: #C1C8FF;
+$body-border: 20px;
 @mixin prefix($property,
 $val) {
   -webkit-#{$property}: $val;
@@ -60,7 +61,7 @@ $val) {
 body {
   box-sizing: border-box;
   height: 100vh;
-  border: 20px lighten($purple, 5%) solid;
+  border: $body-border lighten($blue, 7%) solid;
   border-bottom: none;
   font: 17px/1.3 $font-stack;
   transition: border 0.5s ease;
@@ -107,10 +108,10 @@ h5 {
 }
 
 header {
-  width: 100vw;
-  height: 75px;
+  width: calc(100% - calc(2 * #{$body-border}));
   position: fixed;
-  left: 0;
+  left: $body-border;
+  background-color: white;
   display: flex;
   justify-content: center;
 }
@@ -118,7 +119,7 @@ header {
 .header--wrapper {
   width: 770px;
   height: 75px;
-  padding: 15px 0;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,10 +146,10 @@ main {
 a {
   text-decoration: none;
   color: $black;
-  box-shadow: inset 0 -9px 0 0 lighten($purple, 5%);
+  box-shadow: inset 0 -9px 0 0 lighten($blue, 5%);
   transition: color 0.5s ease, box-shadow 0.3s ease;
   &:hover {
-    box-shadow: inset 0 -12px 0 0 lighten($purple, 6%);
+    box-shadow: inset 0 -12px 0 0 lighten($blue, 6%);
     color: lighten($black, 25%);
   }
 }
@@ -235,7 +236,7 @@ nav {
 }
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - #{$body-border});
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,8 +278,8 @@ nav {
   }
   &--cta {
     @extend .btn;
-    color: darken($purple, 10%);
-    border: 2px $purple solid;
+    color: darken($blue, 10%);
+    border: 2px $blue solid;
   }
   &--disabled {
     @extend .btn;
@@ -286,14 +287,14 @@ nav {
     box-shadow: none;
     display: inline;
     text-transform: uppercase;
-    color: darken($purple, 10%);
-    border: 2px $purple solid;
+    color: darken($blue, 10%);
+    border: 2px $blue solid;
   }
 }
 
 #circle {
   position: absolute;
-  top: 0;
+  top: $body-border;
   left: 0;
   bottom: 0;
   right: 0;
@@ -319,9 +320,19 @@ nav {
 .sketch {
   position: absolute;
   z-index: -3;
-  top: 0;
+  top: $body-border;
   left: 0;
   opacity: .2
+}
+
+.borderside {
+  border: $body-border lighten($blue, 7%) solid; //border-top: none;
+  border-bottom: none;
+  position: fixed;
+  width: calc(100vw - calc(#{$body-border} * 2));
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
 .fade-in {
@@ -330,11 +341,11 @@ nav {
 }
 
 ::selection {
-  background: $purple;
+  background: $blue;
 }
 
 ::-moz-selection {
-  background: $purple;
+  background: $blue;
 }
 
 @media (max-width: $br-medium) {
