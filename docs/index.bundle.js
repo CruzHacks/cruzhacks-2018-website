@@ -8203,8 +8203,8 @@ Particle.prototype = {
     this.time += this.delta;
 
     this.theta += random(-0.5, 0.5) * this.wander;
-    this.vx += sin(this.theta) * 0.1;
-    this.vy += cos(this.theta) * 0.1;
+    this.vx += sin(this.theta) * 0.5;
+    this.vy += cos(this.theta) * 0.5;
 
     this.size = Math.abs(this.radius * sin(this.time * (PI / this.lifespan)));
 
@@ -8219,7 +8219,7 @@ Particle.prototype = {
 };
 
 var MAX_PARTICLES = 30000000;
-var COLOURS = ['#8063D7', '#573DA4', '#638DD7', '#63C2D7', '#503070'];
+var COLOURS = ['#8063D7', '#573DA4', '#9999FF', '#41426B', '#503070'];
 
 var particles = [];
 var pool = [];
@@ -8242,8 +8242,8 @@ demo.setup = function () {
       var r = spawn_radius * random();
       x = 1.6 * r * cos(angle) + center_x;
       y = 0.9 * r * sin(angle) + center_y;
-      demo.spawn(x, y, random(0.5, 9.0), random(COLOURS), random(15, 55), 10, 0.05);
-    }, 300);
+      demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(15, 55), 10, 0.05);
+    }, 200);
   }
   spawnCircles();
 
@@ -8253,7 +8253,7 @@ demo.setup = function () {
   });
 };
 
-demo.spawn = function (x, y, wander, color, radius, lifespan, speed) {
+demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
   var particle, theta, force;
 
   if (particles.length >= MAX_PARTICLES) {
@@ -8265,10 +8265,10 @@ demo.spawn = function (x, y, wander, color, radius, lifespan, speed) {
 
   particle.wander = wander;
   particle.color = color;
-  particle.drag = 0;
+  particle.drag = drag;
 
   theta = random(TWO_PI);
-  force = .9;
+  force = 10;
 
   particle.vx = sin(theta) * force;
   particle.vy = cos(theta) * force;
@@ -8300,12 +8300,11 @@ function scrollHandler(scrollpos) {
   console.log(scrollpos);
   if (scrollpos > 40) {
     header.style.height = '50px';
-    body.style.border = '0 rgba(144, 122, 254, 0.20) solid';
+    //body.style.border = '0 rgb(229, 232, 255) solid'
   } else if (scrollpos <= 20) {
     header.style.height = '75px';
-    body.style.transform = 'all .2s ease';
-    body.style.border = '20px rgba(144, 122, 254, 0.20) solid';
-    body.style.borderBottom = '0';
+    //body.style.border = '20px rgb(229, 232, 255) solid'
+    //body.style.borderBottom = '0'
   }
 }
 
