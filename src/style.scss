@@ -67,6 +67,7 @@ body {
   transition: border 0.5s ease;
   @media (max-width: $br-small) {
     font-size: .9rem;
+    border: none;
   }
 }
 
@@ -81,8 +82,8 @@ h5 {
 
 h1 {
   font-size: 2.7em;
-  line-height: 1.02;
   font-weight: normal;
+  line-height: 1.02;
 }
 
 h2 {
@@ -96,18 +97,19 @@ h3 {
 }
 
 h4 {
-  font-weight: bold;
+  font-size: 0.8em;
+  font-weight: 100;
   font-style: italic;
-  font-size: 1em;
 }
 
 h5 {
-  font-weight: lighter;
+  font-size: 0.5em;
+  font-weight: 100;
   font-style: italic;
-  font-size: 0.8em;
 }
 
 p {
+  color: #555;
   font-weight: 100;
 }
 
@@ -118,6 +120,15 @@ header {
   background-color: white;
   display: flex;
   justify-content: center;
+  @media (max-width: $br-small) {
+    left: 0;
+    width: 100%;
+  }
+}
+
+mark {
+  background-color: rgba(0, 88, 255, 0.11);
+  padding: 1px;
 }
 
 .header--wrapper {
@@ -131,10 +142,8 @@ header {
   background-color: white;
   transition: all 0.5s ease;
   @media (max-width: $br-medium) {
-    margin: 30px auto;
     width: 70%;
     left: 50%;
-    margin-left: -35%;
     font-size: 1.3em;
   }
 }
@@ -260,7 +269,7 @@ nav {
   }
 }
 
-.main-container {
+.main--container {
   padding: 110px 0;
   width: 100vw;
   box-shadow: 0 0 70px rgba(0, 0, 0, .04);
@@ -271,22 +280,124 @@ nav {
   @extend main;
 }
 
+.dark-bg {
+  background-color: darken(white, 1%);
+  width: calc(100vw - calc(#{$body-border} * 2));
+  position: relative;
+  left: calc(50% + #{$body-border});
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.persona--container {
+  @media(min-width: $br-medium) {
+    width: calc(100vw - calc(#{$body-border} * 2));
+    position: relative;
+    left: calc(50% + #{$body-border});
+    right: 50%;
+    margin: 50px -50vw;
+    height: 500px;
+    flex-direction: row;
+  }
+  margin: 50px 0;
+  z-index: -1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor--tier {
+  a {
+    box-shadow: none;
+    img {
+      height: 55px;
+      padding: 0 20px;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.03);
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.sponsor--cta {
+  margin: 40px 0;
+  border-top: 1px solid #eaeaea;
+  padding: 20px 0;
+  p, .btn {
+    font-size: .6em;
+  }
+  .twocol {
+    justify-content: center;
+    .twocol--body {
+      width: initial;
+    }
+  }
+}
+
+.persona {
+  width: 280px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(46, 61, 73, .05);
+  border-radius: 5px;
+  margin: 0 3%;
+  @media(max-width: $br-medium) {
+    margin: 20px 3%;
+    width: 80%;
+  }
+  p {
+    padding: 7px 20px;
+    font-size: .9em;
+  }
+  &--person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 0;
+    @media(max-width: $br-medium) {
+      justify-content: flex-start;
+      padding: 20px 20px 0;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin-right: 15px;
+    }
+    p {
+      padding: 0;
+      font-size: .7em;
+      margin: 0;
+      color: #c3c3c3;
+    }
+  }
+  &--details {
+    width: 150px;
+  }
+}
+
 .card {
-  width: 570px;
-  height: 155px;
+  width: 530px;
+  height: 135px;
   margin: 30px 0;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(46, 61, 73, .05);
-  border-radius: 9px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 1px solid rgba(185, 185, 185, 0.2);
+  @media (max-width: $br-small) {
+    width: 100%;
+  }
   &--body {
     width: 350px;
   }
   &--wrap {
-    margin: 90px 0;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,20 +411,42 @@ nav {
 
 .twocol {
   display: flex;
-  width: 50vw;
   align-items: center;
-  margin: 90px 0 90px -14%;
-  &--body {
-    padding: 0 30px;
-    width: 410px;
-    img {
-      border-radius: 7px;
+  @media (max-width: $br-medium) {
+    flex-direction: column;
+  }
+  &--expanded {
+    @extend .twocol;
+    margin: 90px 0 90px -9%;
+    width: 118%;
+  }
+  div:first-child {
+    margin-right: 120px;
+    @media (max-width: $br-medium) {
+      margin: 20px 0;
     }
+  }
+  &--body {
+    width: 50%;
+    font-size: 0.9em;
+    p {
+      margin-bottom: 0
+    }
+    @media (max-width: $br-medium) {
+      width: initial;
+    }
+  }
+  &--image {
+    @extend .twocol--body;
+    height: 250px;
+    border-radius: 7px;
+    overflow: hidden;
   }
 }
 
 .btn {
   display: block;
+  font-weight: 100;
   width: 60px;
   margin: 0 auto;
   padding: 12px 30px;
@@ -385,10 +518,14 @@ nav {
   border: $body-border lighten($blue, 7%) solid; //border-top: none;
   border-bottom: none;
   position: fixed;
+  pointer-events: none;
   width: calc(100vw - calc(#{$body-border} * 2));
   height: 100vh;
   top: 0;
   left: 0;
+  @media (max-width: $br-small) {
+    display:none;
+  }
 }
 
 .fade-in {
@@ -413,4 +550,9 @@ nav {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
 }
