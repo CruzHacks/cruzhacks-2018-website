@@ -1,6 +1,7 @@
 import {
   TweenMax
 } from 'gsap'
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 require('./style.scss')
 var Sketch = require('./sketch.min.js')
@@ -15,6 +16,35 @@ var close = document.getElementsByClassName('hamburger__close')[0]
 var mobileNav = document.getElementsByClassName('mobile-nav')[0]
 var header = document.getElementsByClassName('header--wrapper')[0]
 var body = document.getElementsByTagName('body')[0]
+var navlink = document.getElementsByClassName('hash-link')
+var smooth = document.getElementsByClassName('smooth')
+
+console.log(navlink)
+for (var i = 0; i < navlink.length; i++) {
+  navlink[i].addEventListener('click', function gotoHash(e) {
+    e.preventDefault()
+    var href = this.href
+
+    TweenMax.to('main', .1, {
+      opacity: 0,
+      onComplete: () => {
+        window.location = href;
+        TweenMax.to('main', .1, {
+          opacity: 1
+        })
+      }
+    })
+  })
+}
+
+for (var i = 0; i < smooth.length; i++) {
+  smooth[i].addEventListener('click', function scrollSmooth(e) {
+    e.preventDefault()
+    TweenLite.to(window, 1, {
+      scrollTo: document.getElementById('about').offsetTop
+    })
+  })
+}
 
 menu.addEventListener('click', (e) => {
   e.preventDefault()

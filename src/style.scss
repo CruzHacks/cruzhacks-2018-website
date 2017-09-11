@@ -89,6 +89,13 @@ h1 {
 h2 {
   font-size: 1.6em;
   font-weight: 100;
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: -150px;
+    height: 150px;
+    visibility: hidden;
+  }
 }
 
 h3 {
@@ -97,13 +104,13 @@ h3 {
 }
 
 h4 {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 100;
   font-style: italic;
 }
 
 h5 {
-  font-size: 0.5em;
+  font-size: 0.8em;
   font-weight: 100;
   font-style: italic;
 }
@@ -111,12 +118,18 @@ h5 {
 p {
   color: #555;
   font-weight: 100;
+  &.small {
+    text-transform: uppercase;
+    font-size: .85em;
+    color: #d8d8d8
+  }
 }
 
 header {
   width: calc(100% - calc(2 * #{$body-border}));
   position: fixed;
   left: $body-border;
+  z-index: 1;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -125,6 +138,8 @@ header {
     width: 100%;
   }
 }
+
+
 
 mark {
   background-color: rgba(0, 88, 255, 0.11);
@@ -145,14 +160,6 @@ mark {
     width: 70%;
     left: 50%;
     font-size: 1.3em;
-  }
-}
-
-main {
-  width: 700px;
-  margin: 0 auto;
-  @media (max-width: $br-small) {
-    width: 85%;
   }
 }
 
@@ -267,9 +274,19 @@ nav {
       font-size: 1.3em;
     }
   }
+  .small {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6vh;
+  }
+  @media (max-width: $br-small) {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
-.main--container {
+.main-container {
   padding: 110px 0;
   width: 100vw;
   box-shadow: 0 0 70px rgba(0, 0, 0, .04);
@@ -277,7 +294,11 @@ nav {
 }
 
 .main-wrap {
-  @extend main;
+  width: 700px;
+  margin: 0 auto;
+  @media (max-width: $br-small) {
+    width: 85%;
+  }
 }
 
 .dark-bg {
@@ -328,12 +349,15 @@ nav {
   border-top: 1px solid #eaeaea;
   padding: 20px 0;
   p, .btn {
-    font-size: .6em;
+    font-size: .7em;
   }
   .twocol {
     justify-content: center;
     .twocol--body {
       width: initial;
+      .btn {
+        width: 61px;
+      }
     }
   }
 }
@@ -391,10 +415,13 @@ nav {
   justify-content: center;
   border: 1px solid rgba(185, 185, 185, 0.2);
   @media (max-width: $br-small) {
-    width: 100%;
+    width: 80%;
   }
   &--body {
     width: 350px;
+    @media (max-width: $br-small) {
+      width: initial;
+    }
   }
   &--wrap {
     margin: 50px 0;
@@ -506,6 +533,14 @@ nav {
   }
 }
 
+.arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 3vh;
+}
+
 .sketch {
   position: absolute;
   z-index: -3;
@@ -515,6 +550,7 @@ nav {
 }
 
 .borderside {
+  z-index: 1;
   border: $body-border lighten($blue, 7%) solid; //border-top: none;
   border-bottom: none;
   position: fixed;
