@@ -277,7 +277,7 @@ nav {
   .small {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     bottom: 6vh;
   }
   @media (max-width: $br-small) {
