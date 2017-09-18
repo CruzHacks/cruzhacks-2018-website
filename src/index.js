@@ -19,7 +19,6 @@ var body = document.getElementsByTagName('body')[0]
 var navlink = document.getElementsByClassName('hash-link')
 var smooth = document.getElementsByClassName('smooth')
 
-console.log(navlink)
 for (var i = 0; i < navlink.length; i++) {
   navlink[i].addEventListener('click', function gotoHash(e) {
     e.preventDefault()
@@ -119,7 +118,48 @@ Particle.prototype = {
   }
 }
 
-var MAX_PARTICLES = 30000000
+function Sonar(x, y, radius, lifespan, speed) {
+  this.init(x, y, radius, lifespan, speed)
+}
+
+Sonar.prototype = {
+  init: function (x, y, radius, lifespan, speed) {
+    this.alive = true
+
+    this.radius = radius
+    this.size = 0
+
+    this.opacity = 1
+    this.color = '#ff0'
+    
+    this.lifespan = lifespan
+    this.time = 0.0
+    this.delta = speed
+
+    this.x = x || (window.innerWidth / 2)
+    this.y = y || (window.innerHeight / 2)
+  },
+  move: function () {
+    this.time += this.delta
+    this.opacity = 0.33 * sin(this.size * (PI / this.radius))
+    this.size = (this.radius / this.lifespan) * this.time
+    if (this.time >= this.lifespan) this.alive = false
+  },
+  draw: function (ctx) {
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.size, 0, TWO_PI)
+    console.log(this.opacity)
+
+    ctx.fillStyle = this.color + this.opacity + ')'
+    ctx.strokeStyle = this.color + (2 * this.opacity) + ')'
+    ctx.lineWidth = 3
+
+    ctx.fill()
+    ctx.stroke()
+  }
+}
+
+var MAX_PARTICLES = 100
 var COLOURS = [
   '#8063D7',
   '#573DA4',
@@ -131,9 +171,18 @@ var COLOURS = [
 var particles = []
 var pool = []
 
+var pings = []
+var radar_pool = []
+
 var demo = Sketch.create({
   autopause: false,
   container: document.getElementById('container'),
+  retina: 'auto'
+})
+
+var radar = Sketch.create({
+  autopause: false,
+  container: document.getElementById('radar'),
   retina: 'auto'
 })
 
@@ -149,16 +198,33 @@ demo.setup = function () {
       var r = spawn_radius * random()
       x = 1.6 * r * cos(angle) + center_x
       y = 0.9 * r * sin(angle) + center_y
-      demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(15, 55), 10, 0.05)
-    }, 200)
+      demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05)
+    }, 400)
   }
-  spawnCircles()
 
+  spawnCircles()
   window.addEventListener('focus', spawnCircles)
   window.addEventListener('blur', () => {
     clearInterval(spawn_circles)
   })
+}
 
+radar.setup = function () {
+  var x, y, spawn_radar
+  var center_x = radar.width * 0.5
+  var center_y = radar.height * 0.5
+
+  function spawnRadar() {
+    spawn_radar = setInterval(() => {
+      radar.spawn(center_x, center_y, 'rgba(235, 215, 235, ', 500, 20, 0.10)
+    }, 3000)
+  }
+
+  spawnRadar()
+  window.addEventListener('focus', spawnRadar)
+  window.addEventListener('blur', () => {
+    clearInterval(spawn_radar)
+  })
 }
 
 demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
@@ -182,6 +248,31 @@ demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
   particle.vy = cos(theta) * force
 
   particles.push(particle)
+
+}
+
+radar.spawn = function (x, y, color, radius, lifespan, speed) {
+  var sonar = new Sonar()
+  sonar.init(x, y, radius, lifespan, speed)
+  sonar.color = color
+  pings.push(sonar)
+}
+radar.update = function () {
+  var j, ping
+
+  for (j = pings.length - 1; j >= 0; j--) {
+    ping = pings[j]
+
+    if (ping.alive) ping.move()
+    else radar_pool.push(pings.splice(j, 1)[0])
+  } 
+}
+radar.draw = function () {
+  //radar.globalCompositeOperation = 'lighter'
+
+  for (var j = pings.length - 1; j >= 0; j--) {
+    pings[j].draw(radar)
+  }
 }
 
 demo.update = function () {
@@ -206,7 +297,6 @@ var scrollpos = 0;
 var active = false;
 
 function scrollHandler(scrollpos) {
-  console.log(scrollpos)
   if (scrollpos > 40) {
     header.style.height = '50px'
     //body.style.border = '0 rgb(229, 232, 255) solid'
