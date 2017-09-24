@@ -45,5 +45,7 @@
     "url": "https://github.com/greg-wolff/cruzhacks-2018-website/issues"
   },
   "homepage": "https://github.com/greg-wolff/cruzhacks-2018-website#readme",
-  "dependencies": {}
+  "dependencies": {
+    "scrollmagic": "^2.0.5"
+  }
 }

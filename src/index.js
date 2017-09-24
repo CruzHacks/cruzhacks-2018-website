@@ -1,7 +1,9 @@
-import {
-  TweenMax
-} from 'gsap'
+import { TweenMax } from 'gsap'
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+const ScrollMagic = require('ScrollMagic');
+require('animation.gsap');
+require('debug.addIndicators');
+const TimelineMax = require('TimelineMax');
 
 require('./style.scss')
 var Sketch = require('./sketch.min.js')
@@ -18,6 +20,16 @@ var header = document.getElementsByClassName('header--wrapper')[0]
 var body = document.getElementsByTagName('body')[0]
 var navlink = document.getElementsByClassName('hash-link')
 var smooth = document.getElementsByClassName('smooth')
+
+var controller = new ScrollMagic.Controller()
+
+var stagger = TweenMax.staggerFrom('.card', 0.5, {
+  opacity: 0,
+  y: '20px'
+}, 0.2)
+var scene = new ScrollMagic.Scene({
+  triggerElement: '#cardtrigger'
+}).setTween(stagger).addTo(controller)
 
 for (var i = 0; i < navlink.length; i++) {
   navlink[i].addEventListener('click', function gotoHash(e) {
@@ -148,7 +160,6 @@ Sonar.prototype = {
   draw: function (ctx) {
     ctx.beginPath()
     ctx.arc(this.x, this.y, this.size, 0, TWO_PI)
-    console.log(this.opacity)
 
     ctx.fillStyle = this.color + this.opacity + ')'
     ctx.strokeStyle = this.color + (2 * this.opacity) + ')'
