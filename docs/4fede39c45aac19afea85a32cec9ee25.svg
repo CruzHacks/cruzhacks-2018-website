@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="193px" height="193px" viewBox="0 0 193 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="193" height="193" rx="43"></rect>
+        <linearGradient x1="0%" y1="-47.7636719%" x2="140.336914%" y2="84.5263672%" id="linearGradient-2">
+            <stop stop-color="#B1DBFF" offset="0%"></stop>
+            <stop stop-color="#D0BDEE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="137.106279%" y1="-78.7942858%" x2="-9.63051297%" y2="146.514918%" id="linearGradient-3">
+            <stop stop-color="#B1DBFF" offset="0%"></stop>
+            <stop stop-color="#D0BDEE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Website-Copy" transform="translate(-548.000000, -1917.000000)">
+            <g id="Group-3-Copy" transform="translate(548.000000, 1917.000000)">
+                <g id="Rectangle-8-Copy">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#CCCCCC" stroke-width="1" x="0.5" y="0.5" width="192" height="192" rx="43"></rect>
+                </g>
+                <g id="Group-3-Copy-3" transform="translate(33.000000, 47.000000)" stroke-width="3">
+                    <path d="M114.187528,82.0985491 L114.187528,73.186697 L118.7,73.186697 C121.350967,73.186697 123.5,71.0376638 123.5,68.3866971 L123.5,6.29999983 C123.5,3.64903313 121.350967,1.5 118.7,1.5 L35.9762588,1.5 C33.3252921,1.5 31.176259,3.64903313 31.176259,6.29999983 L31.176259,68.3866971 C31.176259,71.0376638 33.3252921,73.186697 35.9762588,73.186697 L102.756992,73.186697 L114.187528,82.0985491 Z" id="Rectangle-9" stroke="url(#linearGradient-2)"></path>
+                    <path d="M84.5112691,106.011593 L84.5112691,97.0997404 L89.0237412,97.0997404 C91.6747079,97.0997404 93.823741,94.9507073 93.823741,92.2997406 L93.823741,30.2130433 C93.823741,27.5620766 91.6747079,25.4130435 89.0237412,25.4130435 L6.29999983,25.4130435 C3.64903313,25.4130435 1.5,27.5620766 1.5,30.2130433 L1.5,92.2997406 C1.5,94.9507073 3.64903313,97.0997404 6.29999983,97.0997404 L73.0807329,97.0997404 L84.5112691,106.011593 Z" id="Rectangle-9" stroke="url(#linearGradient-3)" transform="translate(47.661871, 66.026610) scale(-1, 1) translate(-47.661871, -66.026610) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
