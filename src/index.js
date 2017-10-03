@@ -22,6 +22,8 @@ var body = document.getElementsByTagName('body')[0]
 var navlink = document.getElementsByClassName('hash-link')
 var smooth = document.getElementsByClassName('smooth')
 
+document.getElementsByClassName('year')[0].innerHTML = new Date().getFullYear();
+
 // Initial pageload fade in
 TweenMax.delayedCall(0.2, () => {
   TweenMax.staggerTo('.fade-in', 0.5, {
@@ -44,6 +46,8 @@ var scene = new ScrollMagic.Scene({
 for (var i = 0; i < navlink.length; i++) {
   navlink[i].addEventListener('click', function gotoHash(e) {
     e.preventDefault()
+    menu.classList.remove('hidden')
+    mobileNav.classList.add('hidden')
     var href = this.href
 
     TweenMax.to('main', .1, {

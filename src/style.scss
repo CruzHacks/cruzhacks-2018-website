@@ -186,11 +186,21 @@ a {
   }
 }
 
+.hash-link {
+  font-weight: 100;
+}
+.social-link {
+  display: flex;
+  opacity: 0.3;
+}
+
 nav {
   >a:last-child {
     padding-right: 0;
   }
   ul {
+    display: flex;
+    align-items: center;
     li {
       font-size: 0.9em;
       display: inline-block;
@@ -224,11 +234,14 @@ nav {
     }
   }
   &__wrapper {
+    a {
+      font-weight: 100;
+    }
     position: relative;
     width: 70%;
-    margin: 89px auto;
+    margin: 26px auto;
     @media (max-width: $br-small) {
-      margin: 91px auto;
+      margin: 28px auto;
     }
   }
   &__item {
@@ -248,6 +261,7 @@ nav {
 
 .hamburger {
   @extend .nav-link;
+  font-weight: 100;
   @media (min-width: $br-medium) {
     display: none;
   }
@@ -260,10 +274,16 @@ nav {
 
 .hero {
   height: calc(100vh);
+  background: linear-gradient(167deg, rgba(0, 0, 0, 0), rgba(155, 120, 241, 0.86));
+  opacity: 0.9;
   display: flex;
   align-items: center;
   justify-content: center;
   &--text {
+    padding: 90px 80px;
+    border-radius: 390px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     z-index: -1;
     width: 400px;
     text-align: center;
@@ -285,6 +305,12 @@ nav {
       color: white;
 
     }
+    @media (max-width: $br-small) {
+      font-size: 0.9em;
+      padding: 0;
+      background-color: unset;
+      border: none;
+    }
   }
   .small {
     position: absolute;
@@ -293,10 +319,6 @@ nav {
     transform: translateX(-50%) !important;
     color: white;
   }
-  @media (max-width: $br-small) {
-    width: 85%;
-    margin: 0 auto;
-  }
 }
 
 .main-container {
@@ -304,6 +326,9 @@ nav {
   width: 100vw;
   box-shadow: 0 -30px 50px rgba(0, 0, 0, 0.12);
   margin-left: calc(-50vw + 50%);
+  @media (max-width: $br-medium) {
+    padding: 90px 0;
+  }
 }
 
 .main-wrap {
@@ -336,7 +361,7 @@ nav {
     height: 500px;
     flex-direction: row;
   }
-  margin: 50px 0;
+  margin: 0;
   z-index: -1;
   flex-direction: column;
   display: flex;
@@ -356,6 +381,10 @@ nav {
         transform: scale(1.03);
         opacity: 0.7;
       }
+      @media (max-width: $br-medium) {
+        height: 30px;
+        padding: 0 10px;
+      }
     }
   }
 }
@@ -364,15 +393,30 @@ nav {
   margin: 40px 0;
   border-top: 1px solid #eaeaea;
   padding: 20px 0;
+  @media (max-width: $br-medium) {
+    margin: 0;
+  }
   p, .btn {
     font-size: .7em;
+    @media (max-width: $br-small) {
+      font-size: .8em;
+    }
   }
   .twocol {
     justify-content: center;
+    @media (max-width: $br-medium) {
+      align-items: flex-start;
+    }
     .twocol--body {
       width: initial;
+      @media (max-width: $br-medium) {
+        margin: 0;
+      }
       .btn {
         width: 61px;
+        @media (max-width: $br-medium) {
+          margin: 15px 0 0;
+        }
       }
     }
   }
@@ -386,8 +430,8 @@ nav {
   border-radius: 5px;
   margin: 0 2%;
   @media(max-width: $br-medium) {
-    margin: 20px 3%;
-    width: 80%;
+    margin: 15px 3%;
+    width: 100%;
   }
   p {
     padding: 7px 20px;
@@ -429,9 +473,14 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   border: 1px solid rgba(185, 185, 185, 0.2);
   @media (max-width: $br-small) {
     width: 80%;
+    height: initial;
+    padding: 30px;
+    margin: 15px 0;
+
   }
   &--col {
     width: 350px;
@@ -441,6 +490,7 @@ nav {
     justify-content: center;
     @media (max-width: $br-small) {
       width: initial;
+      font-size: .8em;
     }
     p {
       margin: 1em 0 .5em;
@@ -450,6 +500,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    img {
+      @media (max-width: $br-small) {
+        height: 95px;
+      }
+    }
   }
   &--wrap {
     margin: 50px 0;
@@ -471,39 +526,43 @@ nav {
 .schedule--container {
   @media(min-width: $br-medium) {
     padding: 80px 0;
-    width: 100vw;
     //width: calc(100vw - calc(#{$body-border} * 2));
-    position: relative;
-    left: 50%;
     //left: calc(50% + #{$body-border});
     right: 50%;
     margin: 20px -50vw;
     height: 500px;
     flex-direction: row;
     //background-color: #F5F5F5;
-    background: url('images/campus.jpg') center center no-repeat;
-    background-size: cover;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, .09);
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(90deg, #98a1ff, #dc87ff);
-      opacity: 0.6;
-    }
+    box-shadow: unset;
   }
+  margin: 0 -50vw;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  background: url('images/campus.jpg') center center no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .09);
   z-index: -1;
   flex-direction: column;
   display: flex;
   justify-content: center;
+  padding: 55px 0;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #98a1ff, #dc87ff);
+    opacity: 0.6;
+  }
 }
 
 .schedule--col {
   z-index: 0;
   font-weight: 100;
+  margin: 10px 12%;
   color: white;
   h4 {
     color: #F1F1F1;
@@ -536,11 +595,20 @@ nav {
   margin: 80px 0 30px;
 }
 
+#stories, #sponsors, #faq {
+  @media (max-width: $br-medium) {
+    margin-top: 40px;
+  }
+}
+
 .faq--col {
   margin: 0 17px;
   width: 40%;
   display: flex;
   flex-direction: column;
+  @media (max-width: $br-medium) {
+    width: 100%;
+  }
 }
 
 .faq--container {
@@ -549,6 +617,11 @@ nav {
     flex-wrap: wrap;
     margin: 0px 0 0 -35%;
     width: 170%;
+    @media (max-width: $br-medium) {
+      margin: 0;
+      width: 100%;
+
+    }
 }
 
 
@@ -570,11 +643,15 @@ nav {
     @extend .twocol;
     margin: 90px 0 90px -9%;
     width: 118%;
+    @media (max-width: $br-medium) {
+      margin: 0;
+      width: 100%;
+    }
   }
   div:first-child {
     margin-right: 120px;
     @media (max-width: $br-medium) {
-      margin: 20px 0;
+      margin: 50px 0;
     }
   }
   &--body {
@@ -592,6 +669,12 @@ nav {
     height: 250px;
     border-radius: 7px;
     overflow: hidden;
+    @media (max-width: $br-medium) {
+      border-radius: 0px;
+      img {
+        width: 100vw;
+      }
+    }
   }
 }
 
@@ -682,7 +765,7 @@ nav {
   opacity: .7;
   top: 0;
   left: 0;
-  background-image: url('images/hero.jpg')
+  background-image: url('images/hero2.jpg')
 }
 #container > .sketch {
   position: absolute;
@@ -692,6 +775,42 @@ nav {
   top: $body-border;
   left: 0;
   opacity: .1
+}
+
+footer {
+  background-color:#fcfcfc;
+  border-top: 1px solid #efefef;
+  padding: 20px 70px;
+  font-size: .75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .social {
+    display: flex;
+    align-items: center;
+    opacity: .6;
+    a {
+      margin: 0 4px;
+      box-shadow: none;
+      img {
+        height: 20px;
+        opacity: .7;
+        box-shadow: none;
+      }
+      &:last-child {
+        img {
+          height: 25px;
+        }
+      }
+    }
+  }
+  @media (max-width: $br-medium) {
+    padding: 20px 30px;
+    align-items: flex-start;
+    p:last-child {
+      text-align: right;
+    }
+  }
 }
 
 .borderside {
@@ -724,6 +843,12 @@ nav {
 
 @media (max-width: $br-medium) {
   .hide-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $br-medium) {
+  .hide-desktop {
     display: none;
   }
 }
