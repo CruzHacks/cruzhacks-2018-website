@@ -33,7 +33,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|woff(2)?|svg)$/,
+        test: /\.(jpg|png|woff(2)?|svg)$/,
         loader: 'file-loader'
       },
       {
@@ -59,7 +59,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'CruzHacks 2018 | All Inclusive Hackathon in Santa Cruz',
-      //favicon: __dirname + '/images/favicon.ico',
+      favicon: __dirname + '/src/images/favicon.png',
       minify: {
         collapseWhitespace: true,
         removeComments: true,

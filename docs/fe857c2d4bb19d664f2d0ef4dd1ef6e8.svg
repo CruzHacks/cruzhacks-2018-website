@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="538px" height="456px" viewBox="0 0 538 456" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Profile Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.061617e-15%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#D4CBFF" offset="0%"></stop>
+            <stop stop-color="#DBEAFD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Profile-Copy-3">
+            <path d="M435.31098,287 L102.685655,287 C45.9764913,287 0,241.108138 0,184.496641 C0,127.888503 45.9764913,82 102.685655,82 L435.31098,82 C492.023509,82 538,127.888503 538,184.496641 C538,241.108138 492.023509,287 435.31098,287" id="Fill-1-Copy-2" fill="url(#linearGradient-1)" opacity="0.370527627"></path>
+            <polyline id="Stroke-4-Copy-2" stroke="#FFFFFF" stroke-width="20.1600005" stroke-linecap="round" stroke-linejoin="round" points="309.12285 446 219.582934 446 321.709147 407.238933 207 407.238933 341 365"></polyline>
+            <path d="M349.292753,355.535142 C354.705912,323.871807 382.407562,290.438013 394.963131,276.630447 C400.870843,270.136524 406.270545,263.195787 410.708058,255.623462 C425.376408,230.601869 433.565115,201.327142 432.969634,170.100543 C431.341312,84.2215155 361.828136,13.3796329 275.870259,10.120913 C182.672408,6.5867137 106,80.9863121 106,173.268556 C106,202.714617 113.808541,230.339827 127.464237,254.195673 C132.228086,262.513807 138.139162,270.106288 144.568341,277.218361 C157.359411,291.365236 184.371379,324.311902 189.70716,355.535142 C190.736636,361.538577 195.796544,366 201.892656,366 L337.107256,366 C343.203369,366 348.263277,361.538577 349.292753,355.535142 Z" id="Stroke-6-Copy-2" stroke="#FFFFFF" stroke-width="20.1600005" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M272,365 L272,224" id="Stroke-8-Copy-2" stroke="#FFFFFF" stroke-width="20.1600005" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M235,180.498327 C235,160.341935 251.341935,144 271.498327,144 C291.661411,144 308,160.341935 308,180.498327 C308,200.654719 291.661411,217 271.498327,217 C251.341935,217 235,200.654719 235,180.498327 Z" id="Stroke-10-Copy-2" stroke="#FFFFFF" stroke-width="20.1600005" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

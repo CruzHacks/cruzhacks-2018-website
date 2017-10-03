@@ -16,13 +16,22 @@ var Sketch = require('./sketch.min.js')
 var menu = document.getElementsByClassName('hamburger')[0]
 var close = document.getElementsByClassName('hamburger__close')[0]
 var mobileNav = document.getElementsByClassName('mobile-nav')[0]
-var header = document.getElementsByClassName('header--wrapper')[0]
+var header_wrap = document.getElementsByClassName('header--wrapper')[0]
+var header = document.getElementsByTagName('header')[0]
 var body = document.getElementsByTagName('body')[0]
 var navlink = document.getElementsByClassName('hash-link')
 var smooth = document.getElementsByClassName('smooth')
 
-var controller = new ScrollMagic.Controller()
+// Initial pageload fade in
+TweenMax.delayedCall(0.2, () => {
+  TweenMax.staggerTo('.fade-in', 0.5, {
+    opacity: 1,
+    y: 0
+  }, 0.2)
+})
 
+// Scrollmagic card trigger
+var controller = new ScrollMagic.Controller()
 var stagger = TweenMax.staggerFrom('.card', 0.5, {
   opacity: 0,
   y: '20px'
@@ -31,6 +40,7 @@ var scene = new ScrollMagic.Scene({
   triggerElement: '#cardtrigger'
 }).setTween(stagger).addTo(controller)
 
+// Navlink fade anim
 for (var i = 0; i < navlink.length; i++) {
   navlink[i].addEventListener('click', function gotoHash(e) {
     e.preventDefault()
@@ -48,6 +58,7 @@ for (var i = 0; i < navlink.length; i++) {
   })
 }
 
+// "Learn more" smooth scroll
 for (var i = 0; i < smooth.length; i++) {
   smooth[i].addEventListener('click', function scrollSmooth(e) {
     e.preventDefault()
@@ -57,6 +68,7 @@ for (var i = 0; i < smooth.length; i++) {
   })
 }
 
+// Mobile menu animation
 menu.addEventListener('click', (e) => {
   e.preventDefault()
   menu.classList.add('hidden')
@@ -73,13 +85,7 @@ close.addEventListener('click', (e) => {
   mobileNav.classList.add('hidden')
 })
 
-TweenMax.delayedCall(0.2, () => {
-  TweenMax.staggerTo('.fade-in', 0.5, {
-    opacity: 1,
-    y: 0
-  }, 0.2)
-})
-
+// Hero particles
 function Particle(x, y, radius, lifespan, speed) {
   this.init(x, y, radius, lifespan, speed)
 }
@@ -130,7 +136,7 @@ Particle.prototype = {
   }
 }
 
-function Sonar(x, y, radius, lifespan, speed) {
+/*function Sonar(x, y, radius, lifespan, speed) {
   this.init(x, y, radius, lifespan, speed)
 }
 
@@ -168,7 +174,7 @@ Sonar.prototype = {
     ctx.fill()
     ctx.stroke()
   }
-}
+}*/
 
 var MAX_PARTICLES = 100
 var COLOURS = [
@@ -178,12 +184,15 @@ var COLOURS = [
   '#41426B',
   '#503070'
 ]
+/*var COLOURS = [
+  '#A5A0E9'
+]*/
 
 var particles = []
 var pool = []
 
 var pings = []
-var radar_pool = []
+//var radar_pool = []
 
 var demo = Sketch.create({
   autopause: false,
@@ -191,14 +200,14 @@ var demo = Sketch.create({
   retina: 'auto'
 })
 
-var radar = Sketch.create({
+/*var radar = Sketch.create({
   autopause: false,
   container: document.getElementById('radar'),
   retina: 'auto'
-})
+})*/
 
 demo.setup = function () {
-  var x, y, spawn_circles
+  var x, y, inner_x1, inner_y1, inner_x2, inner_y2, spawn_circles
   var spawn_radius = 400
   var center_x = demo.width * 0.5
   var center_y = demo.height * 0.5
@@ -208,8 +217,17 @@ demo.setup = function () {
       var angle = 2 * PI * random()
       var r = spawn_radius * random()
       x = 1.6 * r * cos(angle) + center_x
-      y = 0.9 * r * sin(angle) + center_y
-      demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05)
+      y = r * sin(angle) + center_y
+      inner_x2 = center_x + (spawn_radius / 1.33)
+      inner_y2 = center_y + (spawn_radius / 1.33)
+      inner_x1 = center_x - (spawn_radius / 1.33)
+      inner_y1 = center_y - (spawn_radius / 1.33)
+      /*console.log(inner_x1)
+      console.log(inner_y1)
+      console.log(inner_x2)
+      console.log(inner_y2)*/
+      if (x > inner_x2 || y > inner_y2 || x < inner_x1 || y < inner_y1)
+        demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05)
     }, 400)
   }
 
@@ -220,7 +238,7 @@ demo.setup = function () {
   })
 }
 
-radar.setup = function () {
+/*radar.setup = function () {
   var x, y, spawn_radar
   var center_x = radar.width * 0.5
   var center_y = radar.height * 0.5
@@ -236,7 +254,7 @@ radar.setup = function () {
   window.addEventListener('blur', () => {
     clearInterval(spawn_radar)
   })
-}
+} */
 
 demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
   var particle, theta, force
@@ -262,7 +280,7 @@ demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
 
 }
 
-radar.spawn = function (x, y, color, radius, lifespan, speed) {
+/* radar.spawn = function (x, y, color, radius, lifespan, speed) {
   var sonar = new Sonar()
   sonar.init(x, y, radius, lifespan, speed)
   sonar.color = color
@@ -284,7 +302,7 @@ radar.draw = function () {
   for (var j = pings.length - 1; j >= 0; j--) {
     pings[j].draw(radar)
   }
-}
+} */
 
 demo.update = function () {
   var i, particle
@@ -307,17 +325,28 @@ demo.draw = function () {
 var scrollpos = 0;
 var active = false;
 
+// Handle nav scrolling
 function scrollHandler(scrollpos) {
-  if (scrollpos > 40) {
-    header.style.height = '50px'
-    //body.style.border = '0 rgb(229, 232, 255) solid'
+  /*if (scrollpos > 40) {
+    header_wrap.style.height = '50px'
   } else if (scrollpos <= 20) {
-    header.style.height = '75px'
-    //body.style.border = '20px rgb(229, 232, 255) solid'
-    //body.style.borderBottom = '0'
+    header_wrap.style.height = '75px'
+  }*/
+  if (scrollpos > 550) {
+    console.log(header_wrap.style)
+    //header.style.backgroundColor = 'rgba(255,255,255,1)'
+    header.style.opacity = '1'
+    header_wrap.style.height = '50px'
+
+  }
+  else if (scrollpos <= 500) {
+    header.style.opacity = '0'
+    header_wrap.style.height = '75px'
+    //header.style.backgroundColor = 'rgba(255,255,255,0)'
   }
 }
 
+// Scroll listener
 window.addEventListener('scroll', function (e) {
   scrollpos = window.scrollY;
   if (!active) {
