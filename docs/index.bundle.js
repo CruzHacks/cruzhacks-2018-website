@@ -15609,7 +15609,7 @@ demo.setup = function () {
       console.log(inner_x2)
       console.log(inner_y2)*/
       if (x > inner_x2 || y > inner_y2 || x < inner_x1 || y < inner_y1) demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05);
-    }, 400);
+    }, 200);
   }
 
   spawnCircles();
