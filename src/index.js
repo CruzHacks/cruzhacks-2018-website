@@ -90,6 +90,7 @@ close.addEventListener('click', (e) => {
   mobileNav.classList.add('hidden')
 })
 
+/* Removing hero particles for now
 // Hero particles
 function Particle(x, y, radius, lifespan, speed) {
   this.init(x, y, radius, lifespan, speed)
@@ -140,8 +141,100 @@ Particle.prototype = {
     ctx.fill()
   }
 }
+var MAX_PARTICLES = 100
+var COLOURS = [
+  '#8063D7',
+  '#573DA4',
+  '#9999FF',
+  '#41426B',
+  '#503070'
+]
 
-/*function Sonar(x, y, radius, lifespan, speed) {
+var particles = []
+var pool = []
+
+var pings = []
+
+var demo = Sketch.create({
+  autopause: false,
+  container: document.getElementById('container'),
+  retina: 'auto'
+})
+
+demo.setup = function () {
+  var x, y, inner_x1, inner_y1, inner_x2, inner_y2, spawn_circles
+  var spawn_radius = 400
+  var center_x = demo.width * 0.5
+  var center_y = demo.height * 0.5
+
+  function spawnCircles() {
+    spawn_circles = setInterval(() => {
+      var angle = 2 * PI * random()
+      var r = spawn_radius * random()
+      x = 1.6 * r * cos(angle) + center_x
+      y = r * sin(angle) + center_y
+      inner_x2 = center_x + (spawn_radius / 1.33)
+      inner_y2 = center_y + (spawn_radius / 1.33)
+      inner_x1 = center_x - (spawn_radius / 1.33)
+      inner_y1 = center_y - (spawn_radius / 1.33)
+      if (x > inner_x2 || y > inner_y2 || x < inner_x1 || y < inner_y1)
+        demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05)
+    }, 200)
+  }
+
+  spawnCircles()
+  window.addEventListener('focus', spawnCircles)
+  window.addEventListener('blur', () => {
+    clearInterval(spawn_circles)
+  })
+}
+
+
+demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
+  var particle, theta, force
+  
+  if (particles.length >= MAX_PARTICLES) {
+    pool.push(particles.shift())
+  }
+  
+  particle = pool.length ? pool.pop() : new Particle()
+  particle.init(x, y, radius, lifespan, speed)
+  
+  particle.wander = wander
+  particle.color = color
+  particle.drag = drag
+  
+  theta = random(TWO_PI)
+  force = 10
+  
+  particle.vx = sin(theta) * force
+  particle.vy = cos(theta) * force
+  
+  particles.push(particle)
+  
+}
+
+demo.update = function () {
+  var i, particle
+
+  for (i = particles.length - 1; i >= 0; i--) {
+    particle = particles[i]
+
+    if (particle.alive) particle.move()
+    else pool.push(particles.splice(i, 1)[0])
+  }
+}
+demo.draw = function () {
+  demo.globalCompositeOperation = 'lighter'
+
+  for (var i = particles.length - 1; i >= 0; i--) {
+    particles[i].draw(demo)
+  }
+}*/
+
+/*var radar_pool = []
+
+function Sonar(x, y, radius, lifespan, speed) {
   this.init(x, y, radius, lifespan, speed)
 }
 
@@ -179,71 +272,15 @@ Sonar.prototype = {
     ctx.fill()
     ctx.stroke()
   }
-}*/
+}
 
-var MAX_PARTICLES = 100
-var COLOURS = [
-  '#8063D7',
-  '#573DA4',
-  '#9999FF',
-  '#41426B',
-  '#503070'
-]
-/*var COLOURS = [
-  '#A5A0E9'
-]*/
-
-var particles = []
-var pool = []
-
-var pings = []
-//var radar_pool = []
-
-var demo = Sketch.create({
-  autopause: false,
-  container: document.getElementById('container'),
-  retina: 'auto'
-})
-
-/*var radar = Sketch.create({
+var radar = Sketch.create({
   autopause: false,
   container: document.getElementById('radar'),
   retina: 'auto'
-})*/
+})
 
-demo.setup = function () {
-  var x, y, inner_x1, inner_y1, inner_x2, inner_y2, spawn_circles
-  var spawn_radius = 400
-  var center_x = demo.width * 0.5
-  var center_y = demo.height * 0.5
-
-  function spawnCircles() {
-    spawn_circles = setInterval(() => {
-      var angle = 2 * PI * random()
-      var r = spawn_radius * random()
-      x = 1.6 * r * cos(angle) + center_x
-      y = r * sin(angle) + center_y
-      inner_x2 = center_x + (spawn_radius / 1.33)
-      inner_y2 = center_y + (spawn_radius / 1.33)
-      inner_x1 = center_x - (spawn_radius / 1.33)
-      inner_y1 = center_y - (spawn_radius / 1.33)
-      /*console.log(inner_x1)
-      console.log(inner_y1)
-      console.log(inner_x2)
-      console.log(inner_y2)*/
-      if (x > inner_x2 || y > inner_y2 || x < inner_x1 || y < inner_y1)
-        demo.spawn(x, y, 0, random(0, 0.5), random(COLOURS), random(10, 100), 10, 0.05)
-    }, 200)
-  }
-
-  spawnCircles()
-  window.addEventListener('focus', spawnCircles)
-  window.addEventListener('blur', () => {
-    clearInterval(spawn_circles)
-  })
-}
-
-/*radar.setup = function () {
+radar.setup = function () {
   var x, y, spawn_radar
   var center_x = radar.width * 0.5
   var center_y = radar.height * 0.5
@@ -259,33 +296,9 @@ demo.setup = function () {
   window.addEventListener('blur', () => {
     clearInterval(spawn_radar)
   })
-} */
-
-demo.spawn = function (x, y, wander, drag, color, radius, lifespan, speed) {
-  var particle, theta, force
-
-  if (particles.length >= MAX_PARTICLES) {
-    pool.push(particles.shift())
-  }
-
-  particle = pool.length ? pool.pop() : new Particle()
-  particle.init(x, y, radius, lifespan, speed)
-
-  particle.wander = wander
-  particle.color = color
-  particle.drag = drag
-
-  theta = random(TWO_PI)
-  force = 10
-
-  particle.vx = sin(theta) * force
-  particle.vy = cos(theta) * force
-
-  particles.push(particle)
-
 }
 
-/* radar.spawn = function (x, y, color, radius, lifespan, speed) {
+radar.spawn = function (x, y, color, radius, lifespan, speed) {
   var sonar = new Sonar()
   sonar.init(x, y, radius, lifespan, speed)
   sonar.color = color
@@ -308,24 +321,6 @@ radar.draw = function () {
     pings[j].draw(radar)
   }
 } */
-
-demo.update = function () {
-  var i, particle
-
-  for (i = particles.length - 1; i >= 0; i--) {
-    particle = particles[i]
-
-    if (particle.alive) particle.move()
-    else pool.push(particles.splice(i, 1)[0])
-  }
-}
-demo.draw = function () {
-  demo.globalCompositeOperation = 'lighter'
-
-  for (var i = particles.length - 1; i >= 0; i--) {
-    particles[i].draw(demo)
-  }
-}
 
 var scrollpos = 0;
 var active = false;
