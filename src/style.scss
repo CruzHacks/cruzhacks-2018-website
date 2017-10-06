@@ -49,7 +49,7 @@ $br-medium: 900px;
 $br-large: 1500px;
 $black: #222;
 $blue: #C1C8FF;
-$body-border: 30px;
+$body-border: 20px;
 @mixin prefix($property,
 $val) {
   -webkit-#{$property}: $val;
@@ -769,7 +769,7 @@ nav {
   opacity: .7;
   top: 0;
   left: 0;
-  background-image: url('images/hero2.jpg')
+  background-image: url('images/hero4.jpg')
 }
 #container > .sketch {
   position: absolute;
