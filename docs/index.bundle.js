@@ -15412,6 +15412,7 @@ document.getElementsByClassName('year')[0].innerHTML = new Date().getFullYear();
 // Initial pageload fade in
 __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].delayedCall(0.2, () => {
   __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].staggerTo('.fade-in', 0.5, {
+    delay: .4,
     opacity: 1,
     y: 0
   }, 0.2);

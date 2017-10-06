@@ -27,6 +27,7 @@ document.getElementsByClassName('year')[0].innerHTML = new Date().getFullYear();
 // Initial pageload fade in
 TweenMax.delayedCall(0.2, () => {
   TweenMax.staggerTo('.fade-in', 0.5, {
+    delay: .4,
     opacity: 1,
     y: 0
   }, 0.2)

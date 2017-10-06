@@ -61,7 +61,6 @@ $val) {
 body {
   box-sizing: border-box;
   height: 100vh;
-  //border: $body-border rgba(0,0,0,0) solid;
   border-bottom: none;
   font: 17px/1.3 $font-stack;
   transition: border 0.5s ease;
@@ -128,10 +127,8 @@ p {
 header {
   opacity: 0;
   width: 100%;
-  //width: calc(100% - calc(2 * #{$body-border}));
   position: fixed;
   left: 0;
-  //left: $body-border;
   z-index: 1;
   background-color: white;
   transition: all .5s ease;
@@ -230,7 +227,7 @@ nav {
     flex-direction: column;
     align-items: center;
     li:first-child {
-      padding-top: 60px;
+      padding-top: 40px;
     }
   }
   &__wrapper {
@@ -245,7 +242,7 @@ nav {
     }
   }
   &__item {
-    padding: 15px 0;
+    padding: 25px 0;
     list-style: none;
     a {
       display: block;
@@ -282,7 +279,7 @@ nav {
   &--text {
     padding: 90px 80px;
     border-radius: 390px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     z-index: -1;
     width: 400px;
     text-align: center;
@@ -351,10 +348,8 @@ nav {
 .persona--container {
   @media(min-width: $br-medium) {
     width: 100vw;
-    //width: calc(100vw - calc(#{$body-border} * 2));
     position: relative;
     left: 50%;
-    //left: calc(50% + #{$body-border});
     right: 50%;
     margin: 50px -50vw;
     height: 500px;
@@ -525,13 +520,10 @@ nav {
 .schedule--container {
   @media(min-width: $br-medium) {
     padding: 80px 0;
-    //width: calc(100vw - calc(#{$body-border} * 2));
-    //left: calc(50% + #{$body-border});
     right: 50%;
     margin: 20px -50vw;
     height: 500px;
     flex-direction: row;
-    //background-color: #F5F5F5;
     box-shadow: unset;
   }
   margin: 0 -50vw;
@@ -753,6 +745,7 @@ nav {
   bottom: 3vh;
 }
 
+/* unused particle system
 #radar > .sketch {
   position: absolute;
   z-index: -3;
@@ -760,25 +753,24 @@ nav {
   left: 0;
   opacity: 1;
 }
+*/
 
 #hero-bg {
   width: 100vw;
   height: 100vh;
   position: absolute;
   z-index: -4;
-  opacity: .7;
   top: 0;
   left: 0;
   background-image: url('images/hero4.jpg')
 }
 #container > .sketch {
   position: absolute;
-  //clip-path: circle(400px at 50vw 50vh);
   filter: blur(5px);
   z-index: -3;
   top: $body-border;
   left: 0;
-  opacity: .1
+  opacity: .2
 }
 
 footer {
@@ -819,8 +811,7 @@ footer {
 
 .borderside {
   z-index: 1;
-  border: $body-border rgba(255,255,255,.3) solid;
-  //border-bottom: none;
+  border: $body-border rgba(255,255,255,.1) solid;
   position: absolute;
   pointer-events: none;
   width: calc(100vw - calc(#{$body-border} * 2));
