@@ -700,8 +700,16 @@ nav {
   }
   &--cta {
     @extend .btn;
-    color: darken($blue, 10%);
-    border: 2px $blue solid;
+    background: linear-gradient(90deg, hsla(234, 100%, 80%, 0.685), rgba(187, 135, 255, 0.658));
+    box-shadow: 0 3px 10px rgba(128, 120, 241, 0.327);
+    color: white;
+    border: none;
+    &:hover {
+      transform: scale(1.03);
+      color: white;
+      box-shadow: 0 5px 15px rgba(128, 120, 241, 0.327);
+
+    }
   }
   &--disabled {
     @extend .btn;
