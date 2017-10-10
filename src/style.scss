@@ -143,7 +143,7 @@ header {
 
 
 mark {
-  background-color: rgba(0, 88, 255, 0.11);
+  background-color: rgba(0, 88, 255, 0.16);
   padding: 1px;
 }
 
@@ -180,6 +180,18 @@ a {
   &:hover {
     color: lighten($black, 25%);
     box-shadow: none;
+  }
+}
+
+.hero-link {
+  text-decoration: none;
+  color: white;
+  box-shadow: none;
+  border-bottom: 1px white dotted;
+  &:hover {
+    box-shadow: none;
+    border-bottom: 1px #8881ff dotted;
+    color: darken(white, 5%);
   }
 }
 
@@ -277,7 +289,7 @@ nav {
   align-items: center;
   justify-content: center;
   &--text {
-    padding: 90px 80px;
+    padding: 90px;
     border-radius: 390px;
     background-color: rgba(255, 255, 255, 0.1);
     z-index: -1;
@@ -487,7 +499,7 @@ nav {
     justify-content: center;
     @media (max-width: $br-small) {
       width: initial;
-      font-size: .8em;
+      font-size: .7em;
     }
     p {
       margin: 1em 0 .5em;
@@ -498,8 +510,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     img {
+      box-shadow: 0 0 20px rgba(198, 198, 243, 0.19);
+      border-radius: 22%;
       @media (max-width: $br-small) {
-        height: 95px;
+        height: 85px;
       }
     }
   }
@@ -518,10 +532,13 @@ nav {
     h4 {
       font-size: 1.1em;
     }
+    @media (max-width: $br-medium) {
+      margin: 8px 0
+    }
   }
 }
 .schedule--container {
-  @media(min-width: $br-medium) {
+  @media (min-width: $br-medium) {
     padding: 80px 0;
     right: 50%;
     margin: 20px -50vw;
@@ -585,7 +602,7 @@ nav {
   box-shadow: 0 0 15px rgba(0, 0, 0, .02);
 }
 
-#schedule, #faq {
+#schedule, #faq, #contact, #team {
   margin: 80px 0 30px;
 }
 
@@ -601,6 +618,7 @@ nav {
   display: flex;
   flex-direction: column;
   @media (max-width: $br-medium) {
+    margin: initial;
     width: 100%;
   }
 }
@@ -620,7 +638,6 @@ nav {
 
 
 .justify-right {
-  align-items: flex-end;
   text-align: right;
   .card--col {
     padding: 0 0 0 42px;
@@ -665,6 +682,7 @@ nav {
     overflow: hidden;
     @media (max-width: $br-medium) {
       border-radius: 0px;
+      height: initial;
       img {
         width: 100vw;
       }
@@ -700,12 +718,12 @@ nav {
   }
   &--cta {
     @extend .btn;
-    background: linear-gradient(90deg, hsla(234, 100%, 80%, 0.685), rgba(187, 135, 255, 0.658));
+    background: linear-gradient(90deg, hsla(234, 100%, 80%, 0.685), rgba(157, 135, 255, 0.658));
     box-shadow: 0 3px 10px rgba(128, 120, 241, 0.327);
     color: white;
-    border: none;
+    border: 1px solid rgb(218, 216, 252);
     &:hover {
-      transform: scale(1.03);
+      transform: translateY(-2px);
       color: white;
       box-shadow: 0 5px 15px rgba(128, 120, 241, 0.327);
 
@@ -797,7 +815,7 @@ footer {
     align-items: center;
     opacity: .6;
     a {
-      margin: 0 4px;
+      margin: 0 8px;
       box-shadow: none;
       img {
         height: 20px;

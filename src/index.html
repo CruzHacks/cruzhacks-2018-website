@@ -8,7 +8,7 @@
   <meta property="og:title" content="CruzHacks 2018">
   <meta property="og:description" content="Create, shape, and build with over 700 people in Santa Cruz's biggest hackathon.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content=<%=require("./images/og-image.png")%>>
+  <meta property="og:image" content=<%=require( "./images/og-image.png")%>>
   <meta property="og:url" content="http://cruzhacks.com/">
   <title>
     <%= htmlWebpackPlugin.options.title %>
@@ -22,12 +22,25 @@
       <a class="hash-link" href="#">CruzHacks</a>
       <nav>
         <ul class="hide-mobile">
-          <li><a class="hash-link" href="#about">About</a></li>
-          <li><a class="hash-link" href="#stories">Stories</a></li>
-          <li><a class="hash-link" href="#sponsors">Sponsors</a></li>
-          <li><a class="hash-link" href="#schedule">Schedule</a></li>
-          <li><a class="hash-link" href="#faq">FAQ</a></li>
-          <li><a class="social-link" href="https://facebook.com/cruzhacks" target="_blank"><img height="17" src=<%=require("./images/facebook.svg")%>></a></li>
+          <li>
+            <a class="hash-link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="hash-link" href="#stories">Stories</a>
+          </li>
+          <li>
+            <a class="hash-link" href="#sponsors">Sponsors</a>
+          </li>
+          <li>
+            <a class="hash-link" href="#schedule">Schedule</a>
+          </li>
+          <li>
+            <a class="hash-link" href="#faq">FAQ</a>
+          </li>
+          <li>
+            <a class="social-link" href="https://facebook.com/cruzhacks" target="_blank">
+              <img height="17" src=<%=require( "./images/facebook.svg")%>></a>
+          </li>
         </ul>
         <a href="#" class="hamburger">Menu</a>
       </nav>
@@ -36,11 +49,21 @@
           <a href="#">CruzHacks</a>
           <a href="#" class="hamburger__close">Close</a>
           <ul>
-            <li class="mobile-nav__item"><a class="hash-link" href="#about">About</a></li>
-            <li class="mobile-nav__item"><a class="hash-link" href="#stories">Stories</a></li>
-            <li class="mobile-nav__item"><a class="hash-link" href="#sponsors">Sponsors</a></li>
-            <li class="mobile-nav__item"><a class="hash-link" href="#schedule">Schedule</a></li>
-            <li class="mobile-nav__item"><a class="hash-link" href="#faq">FAQ</a></li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#about">About</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#stories">Stories</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#sponsors">Sponsors</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#schedule">Schedule</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#faq">FAQ</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -51,11 +74,14 @@
       <div class="fade-in hero--text">
         <img class="fade-in" src=<%=require( "./images/logo-white.svg")%>>
         <h1 class="fade-in">CruzHacks 2018</h1>
-        <h2 class="fade-in">Create something that makes <br>a difference.</h2>
+        <h2 class="fade-in">Create something that makes
+          <br>a difference.</h2>
         <div class="fade-in">
           <div class="btn--disabled">Apps open in December!</div>
         </div>
-        <h4 class="fade-in">January 19-21, 2018<br>Santa Cruz, CA</h4>
+        <h4 class="fade-in">January 19-21, 2018
+          <br>Porter Dining Hall
+          <br>Santa Cruz, CA</h4>
       </div>
       <a class="smooth" href="#about">
         <p class="fade-in small">Learn more</p>
@@ -86,7 +112,8 @@
             </div>
             <div class="card--col">
               <h2>Collaborate</h2>
-              <p>Team up with students from 25+ universities, and 50+ mentors as you <br>power through the weekend!
+              <p>Team up with students from 25+ universities, and 50+ mentors as you 
+                <br class="hide-mobile">power through the weekend!
               </p>
             </div>
           </div>
@@ -107,12 +134,12 @@
               levels. Our pre-hack events help newcomers build their first website, and assist seasoned coders in expanding
               their skill set with new technologies.</p>
           </div>
-          <div class="twocol--image__highlight">
-            <img width=380 src="https://i2.wp.com/www.santacruztechbeat.com/wp-content/uploads/2017/01/HackUCSC2017-kickoff.png?fit=800%2C540"></div>
+          <div class="twocol--image__highlight hide-mobile"><img width=380 src=<%=require( "./images/inclusiveevent.jpg")%>></div>
+          <div class="twocol--image hide-desktop"><img width=380 src=<%=require( "./images/inclusiveevent.jpg")%>></div>
         </div>
         <div class="twocol--expanded hide-mobile">
           <div class="twocol--image__highlight">
-            <img width=380 src=<%=require("./images/speakers.jpg")%>>
+            <img width=380 src=<%=require( "./images/extendnetwork.jpg")%>>
           </div>
           <div class="twocol--body justify-right">
             <h3>Extend your industry network</h3>
@@ -131,56 +158,64 @@
             </p>
           </div>
           <div class="twocol--image">
-            <img width=380 src="https://pbs.twimg.com/media/C2-a4FVVIAAP5MS.jpg">
+            <img width=380 src=<%=require( "./images/extendnetwork.jpg")%>>
           </div>
         </div>
         <h2 id="stories" class="center">Stories from past hackers</h2>
         <div class="persona--container">
           <div class="persona">
             <div class="persona--person">
-              <img src=<%=require('./images/sarah.png')%>>
+              <img src=<%=require( './images/sarah.png')%>>
               <div class="persona--details">
                 <h4>Sarah Borland</h4>
-                <p><em>UCSC Alumni &mdash; Software Engineer at IBM</em></p>
+                <p>
+                  <em>UCSC Alumni &mdash; Software Engineer at IBM</em>
+                </p>
               </div>
             </div>
             <p>
               Even as a regular hackthoner, I still hold CruzHacks as the hackathon that was the most monumental in being able to achieve
-              my goals in my technical career. As a participant, <mark>I learned so much from the technical mentors and sponsors as well from
-              my fellow pioneering students from colleges all over the bay.</mark><!--As an organizer, I saw the bonds between companies and students
-              grow into building new innovations and opportunities for careers.--> Without a doubt, CruzHacks has the quintessential spirit
-              of hackathons!
+              my goals in my technical career. As a participant,
+              <mark>I learned so much from the technical mentors and sponsors as well from my fellow pioneering students from colleges
+                all over the bay.</mark>
+              <!--As an organizer, I saw the bonds between companies and students
+              grow into building new innovations and opportunities for careers.-->Without a doubt, CruzHacks has the quintessential spirit of hackathons!
             </p>
           </div>
           <div class="persona">
             <div class="persona--person">
-              <img src="http://www.chantdumonde.com/Publish/artist/151/resize_art_image_chetbaker.jpg">
+              <img src=<%=require('./images/alex.png')%>>
               <div class="persona--details">
-                <h4>Chet Baker</h4>
-                <p><em>Senior &mdash; San Francisco State University</em></p>
+                <h4>Alex Nguyen</h4>
+                <p>
+                  <em>UCSC Alumni &mdash; Former Participant</em>
+                </p>
               </div>
             </div>
             <p>
-              I like to think of myself as a creative person. I love making things. I’m a writer, so I make up stories all the time. I’ve
-              done visual art, I’ve made short movies and sometimes I try to cook, too. But I was always afraid of coding.
-              I felt like websites were the one thing I could never make, because I wasn’t smart or skilled enough.<br>[…]
-              The same kind of creativity that comes through when I’m writing or making anything else,
-              <mark>I felt it when I was playing around with different lines of code to make the website look the way I wanted.</mark>
+              My first hackathon was CruzHacks. It was actually my last year of college, but I did get a lot more than I was expecting –
+              exposure, experience, and fun! It was incredible to see so much diversity in technologies, ideas, and
+              people. <mark>Within those 36 “hacking” hours, I learned things you wouldn’t find in your normal everyday
+              class. I’d definitely say it was a memorable experience – collaborating with friends, programming at lightning
+              speed, and sleeping on tables.</mark> CruzHacks was awesome and there was, like, an unlimited supply of food and free swag.
             </p>
           </div>
           <div class="persona">
             <div class="persona--person">
-              <img src=<%=require('./images/brian.jpg')%>>
+              <img src=<%=require( './images/brian.jpg')%>>
               <div class="persona--details">
                 <h4>Brian Rono</h4>
-                <p><em>Graduate &mdash; CSU Monterey Bay</em></p>
+                <p>
+                  <em>Graduate &mdash; CSU Monterey Bay</em>
+                </p>
               </div>
             </div>
             <p>
-              I went specifically to CruzHacks because it was outside of CSUMB in every way. <mark>A different school, different organizers,
-              new surroundings, new people to think with. It helps to visit other communities to see and understand their perspective.</mark>
-              There is consistently food and snacks available. There is always a volunteer ready to help around the clock. CruzHacks also had
-              more diversity, attracting other schools and outside participants. And the prizes were worth entering for.
+              I went specifically to CruzHacks because it was outside of CSUMB in every way.
+              <mark>A different school, different organizers, new surroundings, new people to think with. It helps to visit other
+                communities to see and understand their perspective.</mark>
+              There is consistently food and snacks available. There is always a volunteer ready to help around the clock. CruzHacks also
+              had more diversity, attracting other schools and outside participants. And the prizes were worth entering for.
             </p>
           </div>
         </div>
@@ -196,14 +231,21 @@
             <p>Mega Sponsors</p>
           </div>-->
           <div class="sponsor--tier">
-            <p>Kilo Sponsors</p>
-            <a href="https://www.google.com/" target="_blank"><img alt="Google" src=<%=require( "./images/google.svg")%>></a>
-            <a href="https://www.microsoft.com/" target="_blank"><img alt="Microsoft" src=<%=require("./images/microsoft.svg")%>></a>
-            <a href="http://www.santacruztechbeat.com/" target="_blank"><img alt="Santa Cruz Tech Beat" src=<%=require( "./images/santacruztechbeat.png")%>></a>
-            <a href="https://www.meetup.com/santacruznewtech/" target="_blank"><img alt="Santa Cruz New Tech MeetUp" src=<%=require("./images/santacruznewtechmeetup.png")%>></a>
-            <a href="https://www.bigdatafed.com/" target="_blank"><img alt="Big Data Federation" src=<%=require( "./images/bigdatafederation.png")%>></a>
-            <a href="http://www.swcgcpa.com/" target="_blank"><img alt="SWCG" src=<%=require("./images/swcg.png")%>></a>
-            <a href="http://www.breretonlawoffice.com/" target="_blank"><img alt="Brereton Law Office" src=<%=require("./images/breretonlawoffice.png")%>></a>
+            <!--<p>Kilo Sponsors</p>-->
+            <a href="https://www.google.com/" target="_blank">
+              <img alt="Google" src=<%=require( "./images/google.svg")%>></a>
+            <a href="https://www.microsoft.com/" target="_blank">
+              <img alt="Microsoft" src=<%=require( "./images/microsoft.svg")%>></a>
+            <a href="http://www.santacruztechbeat.com/" target="_blank">
+              <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/santacruztechbeat.png")%>></a>
+            <a href="https://www.meetup.com/santacruznewtech/" target="_blank">
+              <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/santacruznewtechmeetup.png")%>></a>
+            <a href="https://www.bigdatafed.com/" target="_blank">
+              <img alt="Big Data Federation" src=<%=require( "./images/bigdatafederation.png")%>></a>
+            <a href="http://www.swcgcpa.com/" target="_blank">
+              <img alt="SWCG" src=<%=require( "./images/swcg.png")%>></a>
+            <a href="http://www.breretonlawoffice.com/" target="_blank">
+              <img alt="Brereton Law Office" src=<%=require( "./images/breretonlawoffice.png")%>></a>
           </div>
         </div>
         <div class="sponsor--cta">
@@ -224,30 +266,53 @@
           <div class="schedule--col">
             <h3>Friday</h3>
             <h4>January 20, 2017</h4>
-            <div><span class="schedule--block">8:00pm</span> - Sponsor Setup. Special parking permits will be provided.</div>
-            <div><span class="schedule--block">8:30pm</span> - Doors Open. Registration for all participants. Dinner will be provided.</div>
-            <div><span class="schedule--block">10:00pm</span> - Opening Ceremonies</div>
+            <div>
+              <span class="schedule--block">8:00pm</span> - Sponsor Setup. Special parking permits will be provided.</div>
+            <div>
+              <span class="schedule--block">8:30pm</span> - Doors Open. Registration for all participants. Dinner will be provided.</div>
+            <div>
+              <span class="schedule--block">10:00pm</span> - Opening Ceremonies</div>
           </div>
           <div class="schedule--col">
             <h3>Saturday</h3>
             <h4>January 21, 2017</h4>
-            <div><span class="schedule--block">12:00am</span> - <strong>HACK!</strong></div>
-            <div><span class="schedule--block">8:00am</span> - Breakfast</div>
-            <div><span class="schedule--block">10:00am</span> - <strong>Devpost submission creation</strong></div>
-            <div><span class="schedule--block">12:00pm</span> - Lunch</div>
-            <div><span class="schedule--block">6:00pm</span> - <strong>Devpost submission for categories due</strong></div>
-            <div><span class="schedule--block">8:00pm</span> - Dinner</div>
+            <div>
+              <span class="schedule--block">12:00am</span> -
+              <strong>HACK!</strong>
+            </div>
+            <div>
+              <span class="schedule--block">8:00am</span> - Breakfast</div>
+            <div>
+              <span class="schedule--block">10:00am</span> -
+              <strong>Devpost submission creation</strong>
+            </div>
+            <div>
+              <span class="schedule--block">12:00pm</span> - Lunch</div>
+            <div>
+              <span class="schedule--block">6:00pm</span> -
+              <strong>Devpost submission for categories due</strong>
+            </div>
+            <div>
+              <span class="schedule--block">8:00pm</span> - Dinner</div>
           </div>
           <div class="schedule--col">
             <h3>Sunday</h3>
             <h4>January 22, 2017</h4>
-            <div><span class="schedule--block">8:00am</span> - Breakfast</div>
-            <div><span class="schedule--block">12:00pm</span> - <strong>Code Freeze</strong>, Lunch</div>
-            <div><span class="schedule--block">1:00pm</span> - Round 1 Judging</div>
-            <div><span class="schedule--block">2:30pm</span> - Guest Speaker</div>
-            <div><span class="schedule--block">3:00pm</span> - Round 2 Judging</div>
-            <div><span class="schedule--block">4:30pm</span> - Closing Speakers, Winners Announced</div>
-            <div><span class="schedule--block">5:30pm</span> - Awards Ceremony</div>
+            <div>
+              <span class="schedule--block">8:00am</span> - Breakfast</div>
+            <div>
+              <span class="schedule--block">12:00pm</span> -
+              <strong>Code Freeze</strong>, Lunch</div>
+            <div>
+              <span class="schedule--block">1:00pm</span> - Round 1 Judging</div>
+            <div>
+              <span class="schedule--block">2:30pm</span> - Guest Speaker</div>
+            <div>
+              <span class="schedule--block">3:00pm</span> - Round 2 Judging</div>
+            <div>
+              <span class="schedule--block">4:30pm</span> - Closing Speakers, Winners Announced</div>
+            <div>
+              <span class="schedule--block">5:30pm</span> - Awards Ceremony</div>
           </div>
         </div>
         <h2 id="faq" class="center">Frequently Asked Questions</h2>
@@ -258,14 +323,17 @@
               <p>A hackathon is where you can build out your ideas, network, and show off your skills. This 3-day event consists
                 of forming teams, choosing an idea, building it out, and showing it off at the end. Hundreds of students,
                 sponsors, mentors, and judges gather together to push the limits of what you can build, only limited by your
-                imagination.</p>
+                imagination.
+              </p>
             </div>
             <div class="card--faq">
-              <h4>What are the prizes?</h4>
-              <p>There are going to be awesome prizes at the event! Take a look at our categories page​ ​that​ ​will​ ​be​ ​continually​
-                ​updated​ ​as​ ​the​ ​details​ ​roll​ ​in!</p>
+              <h4>Who can participate?</h4>
+              <p>Everyone can! This event is open to coders, designers, artists, project managers, and anyone else who wants
+                to create! No prior coding or technical experience is necessary,​ ​and​ ​everyone​ ​is​ ​welcome​ ​to​ ​participate​
+                ​in​ ​the​ ​hackathon!</p>
             </div>
-            <div class="card--faq">
+
+            <!--<div class="card--faq">
               <h4>Do I have to pay for parking? Are there parking passes?</h4>
               <p>
                 <mark>Pariatur eiusmod mollit deserunt deserunt laborum do eu. Sint qui adipisicing culpa velit minim velit magna
@@ -279,30 +347,40 @@
                 <mark>Cupidatat laboris quis consectetur ullamco nisi dolor ut. Nisi dolore dolore pariatur dolore laboris Lorem
                   adipisicing fugiat anim adipisicing cupidatat sint cillum sit. Amet tempor irure occaecat ut proident aute
                   et mollit labore. Quis proident et do ut irure enim labore ad ut veniam velit Lorem velit.</mark>
-              </p>
+                </p>
+              </div>-->
+            <div class="card--faq">
+              <h4>What are the prizes?</h4>
+              <p>There are going to be awesome prizes at the event! Take a look at our categories page​ ​that​ ​will​ ​be​ ​continually​
+                ​updated​ ​as​ ​the​ ​details​ ​roll​ ​in!</p>
             </div>
+
             <div class="card--faq">
               <h4>How can I become a sponsor?</h4>
-              <p>Amazing! Our sponsor pamphlet can be found <a target="_blank" href=<%=require( "./Sponsorship.pdf")%>>here.</a> Please also contact Anjali, our sponsorship expert, at <a target="_blank" href="mailto:akanthil@ucsc.edu">akanthil@ucsc.edu</a>                and we can discuss the best way for your organization to get involved!</p>
+              <p>Amazing! Our sponsor pamphlet can be found
+                <a target="_blank" href=<%=require( "./Sponsorship.pdf")%>>here.</a> Please also contact Anjali, our sponsorship expert, at
+                <a target="_blank" href="mailto:akanthil@ucsc.edu">akanthil@ucsc.edu</a> and we can discuss the best way for your organization to get involved!</p>
             </div>
           </div>
           <div class="faq--col">
             <div class="card--faq">
-              <h4>Who can participate?</h4>
-              <p>Everyone can! This event is open to coders, designers, artists, project managers, and anyone else who wants
-                to create! No prior coding or technical experience is necessary,​ ​and​ ​everyone​ ​is​ ​welcome​ ​to​ ​participate​
-                ​in​ ​the​ ​hackathon!</p>
-            </div>
-            <div class="card--faq">
               <h4>How​ ​can​ ​I​ ​keep​ ​up​ ​to​ ​date​ ​on​ ​CruzHacks​ ​2018​ ​news?</h4>
-              <p>Join our Facebook group <a target="_blank" href="https://facebook.com/cruzhacks">here!</a> This is also a great
-                place to find other hackers to team​ ​with,​ ​or​ ​explore​ ​ideas​ ​on​ ​what​ ​to​ ​build.</p>
+              <p>Join our Facebook group
+                <a target="_blank" href="https://facebook.com/cruzhacks">here!</a> This is also a great place to find other hackers to team​ ​with,​ ​or​ ​explore​ ​ideas​ ​on​ ​what​
+                ​to​ ​build.</p>
             </div>
             <div class="card--faq">
               <h4>Is this completely free?</h4>
               <p>Yes! This event is completely free for everyone! Unlike in years past, we will not be charging an admission
                 fee for this event. We will cover all costs (including all meals) for the entire duration of the event. Note:
                 CruzHacks 2018 does not cover any travel​ ​costs</p>
+            </div>
+            <div class="card--faq">
+              <h4>What should I bring to the hackathon?</h4>
+              <p>
+                Some essential things to bring include a laptop (with charger), an empty bag for swag, and a change of clothes if you plan
+                on spending the night!
+              </p>
             </div>
             <!-- <div class="card--faq">
               <h4>I'm not in Santa Cruz, what's the best way to get there?</h4>
@@ -313,12 +391,6 @@
               </p>
             </div> -->
             <div class="card--faq">
-              <h4>What should I bring to the hackathon?</h4>
-              <p>
-                Some essential things to bring include a laptop (with charger), an empty bag for swag, and a change of clothes if you plan on spending the night! 
-              </p>
-            </div>
-            <div class="card--faq">
               <h4>How many people can I have on my team?</h4>
               <p>
                 Each team can have a maximum number of 5 people.
@@ -326,13 +398,25 @@
             </div>
             <div class="card--faq">
               <h4>How can I become a mentor or judge?</h4>
-              <p>Stupendous! We would love to have you as a mentor or judge. Please click on the button at the very top to fill
-                out the form and we'll contact you with more information!</p>
+              <p>Stupendous! We would love to have you as a mentor or judge. More information will be coming in December!</p>
             </div>
           </div>
         </div>
+        <h2 id="contact" class="center">Have any other questions?</h2>
+        <p class="center">Any questions that weren't answered above? Feel free to email us
+          <a href="mailto:akanthil@ucsc.edu" target="_blank">here</a> or reach out to us on
+          <a href="https://www.facebook.com/CruzHacks" target="_blank">Facebook</a> or
+          <a href="https://www.twitter.com/CruzHacks" target="_blank">Twitter</a>!
+        </p>
       </div>
     </div>
+    <!--
+    <h2 id="team" class="center">Meet the organizing team!</h2>
+    <div class="member">
+      <img src=<%=require( "./images/sarah.png")%>>
+      <p>Lead Organizer</p>
+    </div>-->
+
     <!--<div id="circle"></div>-->
     <!--<div id="radar"></div>-->
     <div id="hero-bg"></div>
@@ -340,9 +424,15 @@
   </main>
   <footer>
     <div>
-      <p>© <span class=year></span> CruzHacks. All rights reserved.</p>
+      <p>©
+        <span class=year></span> CruzHacks. All rights reserved.</p>
       <div class="social">
-        <a href=#><img src=<%=require("./images/facebook.svg")%>></a><a href=#><img height=30 src=<%=require("./images/email.svg")%>></a>
+        <a href="http://fb.me/cruzhacks">
+          <img src=<%=require( "./images/facebook.svg")%>></a>
+        <a href="https://www.twitter.com/CruzHacks">
+          <img src=<%=require( "./images/twitter.svg")%>></a>
+        <a href="mailto:akanthil@ucsc.edu">
+          <img height=30 src=<%=require( "./images/email.svg")%>></a>
       </div>
     </div>
     <p>Made with ♥ in Santa Cruz</p>
