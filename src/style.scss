@@ -636,12 +636,69 @@ nav {
     }
 }
 
+.faq--email {
+  margin-bottom: 130px;
+}
+
+.team--container {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__collapsed {
+    @extend .team--container;
+    max-width: 900px;
+  }
+}
+.member {
+  width: 150px;
+  margin: 15px;
+  padding: 25px 40px 20px;
+  box-shadow: 0 4px 20px rgba(46, 61, 73, .05);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(185, 185, 185, 0.2);
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+  }
+  h3 {
+    font-size: 1em;
+    margin: 11px 0 1px;
+  }
+  p {
+    margin: 0;
+    font-size: .8em;
+  }
+
+  .social {
+    margin: 21px 0 0;
+    img {
+      border-radius: unset;
+      width: initial;
+    }
+  }
+
+}
+
 
 .justify-right {
   text-align: right;
   .card--col {
     padding: 0 0 0 42px;
   }
+}
+
+.separator {
+  border: 1px solid #eaeaea;
+  width: 40px;
+  margin: 7px 0;
 }
 
 .twocol {
@@ -810,6 +867,15 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $br-medium) {
+    padding: 20px 30px;
+    align-items: flex-start;
+    p:last-child {
+      text-align: right;
+    }
+  }
+}
+
   .social {
     display: flex;
     align-items: center;
@@ -829,14 +895,6 @@ footer {
       }
     }
   }
-  @media (max-width: $br-medium) {
-    padding: 20px 30px;
-    align-items: flex-start;
-    p:last-child {
-      text-align: right;
-    }
-  }
-}
 
 .borderside {
   z-index: 1;
