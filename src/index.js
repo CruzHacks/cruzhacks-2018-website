@@ -333,7 +333,6 @@ function scrollHandler(scrollpos) {
     header_wrap.style.height = '75px'
   }*/
   if (scrollpos > 550) {
-    console.log(header_wrap.style)
     //header.style.backgroundColor = 'rgba(255,255,255,1)'
     header.style.opacity = '1'
     header_wrap.style.height = '50px'
