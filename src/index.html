@@ -165,9 +165,11 @@
         </div>
         <h2 id="stories" class="center">Stories from past hackers</h2>
         <div class="persona--container">
+          <div class="circle purple"></div>
+          <div class="circle blue"></div>
           <div class="persona">
             <div class="persona--person">
-              <img src=<%=require( './images/sarah.png')%>>
+              <img src=<%=require( './images/stories/sarah.png')%>>
               <div class="persona--details">
                 <h4>Sarah Borland</h4>
                 <p>
@@ -178,15 +180,13 @@
             <p>
               Even as a regular hackthoner, I still hold CruzHacks as the hackathon that was the most monumental in being able to achieve
               my goals in my technical career. As a participant,
-              <mark>I learned so much from the technical mentors and sponsors as well from my fellow pioneering students from colleges
-                all over the bay.</mark>
-              <!--As an organizer, I saw the bonds between companies and students
-              grow into building new innovations and opportunities for careers.-->Without a doubt, CruzHacks has the quintessential spirit of hackathons!
+              <mark>I learnt so much from the technical mentors and sponsors as well as from my fellow pioneering students from
+                colleges all over the bay.</mark> Without a doubt, CruzHacks has the quintessential spirit of hackathons!
             </p>
           </div>
           <div class="persona">
             <div class="persona--person">
-              <img src=<%=require( './images/alex.png')%>>
+              <img src=<%=require( './images/stories/alex.png')%>>
               <div class="persona--details">
                 <h4>Alex Nguyen</h4>
                 <p>
@@ -204,7 +204,7 @@
           </div>
           <div class="persona">
             <div class="persona--person">
-              <img src=<%=require( './images/brian.jpg')%>>
+              <img src=<%=require( './images/stories/brian.jpg')%>>
               <div class="persona--details">
                 <h4>Brian Rono</h4>
                 <p>
@@ -235,19 +235,19 @@
           <div class="sponsor--tier">
             <!--<p>Kilo Sponsors</p>-->
             <a href="https://www.google.com/" target="_blank">
-              <img alt="Google" src=<%=require( "./images/google.svg")%>></a>
+              <img alt="Google" src=<%=require( "./images/sponsors/google.svg")%>></a>
             <a href="https://www.microsoft.com/" target="_blank">
-              <img alt="Microsoft" src=<%=require( "./images/microsoft.svg")%>></a>
+              <img alt="Microsoft" src=<%=require( "./images/sponsors/microsoft.svg")%>></a>
             <a href="http://www.santacruztechbeat.com/" target="_blank">
-              <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/santacruztechbeat.png")%>></a>
+              <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/sponsors/santacruztechbeat.png")%>></a>
             <a href="https://www.meetup.com/santacruznewtech/" target="_blank">
-              <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/santacruznewtechmeetup.png")%>></a>
+              <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/sponsors/santacruznewtechmeetup.png")%>></a>
             <a href="https://www.bigdatafed.com/" target="_blank">
-              <img alt="Big Data Federation" src=<%=require( "./images/bigdatafederation.png")%>></a>
+              <img alt="Big Data Federation" src=<%=require( "./images/sponsors/bigdatafederation.png")%>></a>
             <a href="http://www.swcgcpa.com/" target="_blank">
-              <img alt="SWCG" src=<%=require( "./images/swcg.png")%>></a>
+              <img alt="SWCG" src=<%=require( "./images/sponsors/swcg.png")%>></a>
             <a href="http://www.breretonlawoffice.com/" target="_blank">
-              <img alt="Brereton Law Office" src=<%=require( "./images/breretonlawoffice.png")%>></a>
+              <img alt="Brereton Law Office" src=<%=require( "./images/sponsors/breretonlawoffice.png")%>></a>
           </div>
         </div>
         <div class="sponsor--cta">
@@ -415,6 +415,7 @@
       </div>
       <h2 id="team" class="center">Meet the organizing team!</h2>
       <div class="team--container">
+        <div class="team--section">
         <div class="member">
           <img src=<%=require( "./images/team/anjali.jpg")%>>
           <h3>Anjali Kanthilal</h3>
@@ -439,6 +440,8 @@
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
+      </div>
+      <div class="team--section">
         <div class="member">
           <img src=<%=require( "./images/team/greg.jpg")%>>
           <h3>Greg Wolff</h3>
@@ -454,7 +457,7 @@
         <div class="member">
           <img src=<%=require( "./images/team/anisha.jpg")%>>
           <h3>Anisha Trivedi</h3>
-          <p>Public Relations Lead</p>
+          <p>Director of Public Relations</p>
           <div class="separator"></div>
           <div class="social">
             <a target="_blank" href="https://www.linkedin.com/in/anishatrivedi/">
@@ -464,9 +467,21 @@
           </div>
         </div>
         <div class="member">
+          <img src=<%=require( "./images/team/alexis.jpg")%>>
+          <h3>Alexis Camanga</h3>
+          <p>Director of Logistics</p>
+          <div class="separator"></div>
+          <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/alexiscamanga/">
+              <img src=<%=require( "./images/linkedin.svg")%>></a>
+            <a target="_blank" href="mailto:acamanga@ucsc.edu">
+              <img height=30 src=<%=require( "./images/email.svg")%>></a>
+          </div>
+        </div>
+        <div class="member">
           <img src=<%=require( "./images/team/amit.jpg")%>>
           <h3>Amit Saxena</h3>
-          <p>Logistics Lead</p>
+          <p>Director of Sponsorship</p>
           <div class="separator"></div>
           <div class="social">
             <a target="_blank" href="https://www.linkedin.com/in/amitsa1/">
@@ -475,6 +490,20 @@
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
+        <div class="member">
+          <img src=<%=require( "./images/team/sarah.jpg")%>>
+          <h3>Sarah Ali</h3>
+          <p>Editor-In-Chief</p>
+          <div class="separator"></div>
+          <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/sarah-ali-4a031310b/">
+              <img src=<%=require( "./images/linkedin.svg")%>></a>
+            <a target="_blank" href="mailto:sagali@ucsc.edu">
+              <img height=30 src=<%=require( "./images/email.svg")%>></a>
+          </div>
+        </div>
+      </div>
+      <div class="team--section">
         <div class="member">
           <img src=<%=require( "./images/team/hector.png")%>>
           <h3>Hector Briseno</h3>
@@ -500,26 +529,26 @@
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/sarah.jpg")%>>
-          <h3>Sarah Ali</h3>
-          <p>Public Relations Lead</p>
+          <img src=<%=require( "./images/team/rachel.jpg")%>>
+          <h3>Rachel Trail</h3>
+          <p>Logistics Lead</p>
           <div class="separator"></div>
           <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/sarah-ali-4a031310b/">
+            <a target="_blank" href="https://www.linkedin.com/in/rachel-trail-8625519b/">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:sagali@ucsc.edu">
+            <a target="_blank" href="mailto:rtrail@ucsc.edu">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/alexis.jpg")%>>
-          <h3>Alexis Camanga</h3>
-          <p>Logistics Lead</p>
+          <img src=<%=require( "./images/team/karthik.jpg")%>>
+          <h3>Karthik Manickam</h3>
+          <p>Development Lead</p>
           <div class="separator"></div>
           <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/alexiscamanga/">
+            <a target="_blank" href="https://www.linkedin.com/in/karthik-manickam/">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:acamanga@ucsc.edu">
+            <a target="_blank" href="mailto:kamanick@ucsc.edu">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
@@ -548,18 +577,6 @@
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/rachel.jpg")%>>
-          <h3>Rachel Trail</h3>
-          <p>Sponsorship Lead</p>
-          <div class="separator"></div>
-          <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/rachel-trail-8625519b/">
-              <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:rtrail@ucsc.edu">
-              <img height=30 src=<%=require( "./images/email.svg")%>></a>
-          </div>
-        </div>
-        <div class="member">
           <img src=<%=require( "./images/team/shyaan.jpg")%>>
           <h3>Shyaan Khan</h3>
           <p>Sponsorship Lead</p>
@@ -583,18 +600,7 @@
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
-        <div class="member">
-          <img src=<%=require( "./images/team/karthik.jpg")%>>
-          <h3>Karthik Manickam</h3>
-          <p>Website Lead</p>
-          <div class="separator"></div>
-          <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/karthik-manickam/">
-              <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:kamanick@ucsc.edu">
-              <img height=30 src=<%=require( "./images/email.svg")%>></a>
-          </div>
-        </div>
+      </div>
       </div>
       <h2 id="team" class="center">Advisory Committee</h2>
       <div class="team--container">
@@ -648,7 +654,7 @@
         </div>
       </div>
       <h2 id="team" class="center">Board of Directors</h2>
-      <div class="team--container__collapsed">
+      <div class="team--container">
         <div class="member">
           <img src=<%=require( "./images/team/bud.jpg")%>>
           <h3>Bud Colligan</h3>
