@@ -556,6 +556,65 @@ nav {
   }
 }
 
+.news--container {
+  margin: 50px -50vw;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+  @media (max-width: $br-medium) {
+    width: 100%;
+    left: initial;
+    margin: initial;
+    flex-direction: column;
+  }
+}
+.newscard {
+  width: 300px;
+  margin: 0 20px;
+  padding: 0;
+  height: initial;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+  }
+  &--body {
+    padding: 30px;
+    h5 {
+      text-align: right;
+      color: #777777;
+      margin-top: 7px;
+    }
+  }
+  @media (max-width: $br-medium) {
+    width: 80%;
+    padding: 30px;
+    flex-direction: row; 
+    margin: 10px 0;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    &--body {
+      padding: 0 0 0 17px;
+      h5 {
+        text-align: left;
+      }
+    }
+  }
+}
+
 .schedule--container {
   @media (min-width: $br-medium) {
     padding: 80px 0;
