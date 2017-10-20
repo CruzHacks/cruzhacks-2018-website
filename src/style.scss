@@ -585,6 +585,7 @@ nav {
   height: initial;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
