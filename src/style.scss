@@ -844,13 +844,18 @@ nav {
     font-size: .8em;
   }
   .social {
-    flex-direction: column;
-    a:last-child img {
-      width: 20px;
+    @media (max-width: $br-small) {
+      flex-direction: column;
+      a:last-child img {
+        width: 20px;
+      }
+      img {
+        width: 18px;
+      }
     }
     img {
       border-radius: unset;
-      width: 18px;
+      width: initial;
       &:hover {
         opacity: .4;
       }
@@ -1033,7 +1038,7 @@ nav {
 footer {
   background-color: #fcfcfc;
   border-top: 1px solid #efefef;
-  padding: 20px 70px;
+  padding: 13px 70px;
   font-size: .75em;
   display: flex;
   justify-content: space-between;
