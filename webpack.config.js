@@ -58,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'CruzHacks 2018 | All Inclusive Hackathon in Santa Cruz',
+      title: 'CruzHacks 2018 | Create something that makes a difference.',
       favicon: __dirname + '/src/images/favicon.png',
       minify: {
         collapseWhitespace: true,

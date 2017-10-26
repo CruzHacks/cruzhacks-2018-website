@@ -217,7 +217,7 @@ nav {
       }
       a {
         @extend .nav-link;
-        padding: 10px 31px;
+        padding: 10px 27px;
       }
     }
   }
@@ -394,6 +394,9 @@ nav {
 }
 
 .sponsor--tier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   a {
     box-shadow: none;
     img {
@@ -405,9 +408,27 @@ nav {
         transform: scale(1.03);
         opacity: 0.7;
       }
+      &[alt="Project YX"] {
+        height: 35px;
+        padding-top: 12px;
+      }
+      &[alt="Brereton Law Office"], &[alt="Gesher Group"], &[alt="Formula Slug"] {
+        height: 45px;
+      }
       @media (max-width: $br-small) {
-        height: 30px;
+        height: 39px;
         padding: 0 10px;
+        &[alt="Project YX"] {
+          height: 33px;
+          padding-top: 6px;
+
+        }
+
+        &[alt="Brereton Law Office"],
+        &[alt="Gesher Group"],
+        &[alt="Formula Slug"] {
+          height: 39px;
+        }
       }
     }
   }
@@ -420,7 +441,9 @@ nav {
   @media (max-width: $br-medium) {
     margin: 0;
   }
-  p,
+  p {
+    font-size: .8em;
+  }
   .btn {
     font-size: .7em;
     @media (max-width: $br-small) {
@@ -783,7 +806,6 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
   align-items: center;
   border: 1px solid rgba(185, 185, 185, 0.2);
   border-bottom: 3px solid rgb(179, 166, 238);
@@ -822,9 +844,13 @@ nav {
     font-size: .8em;
   }
   .social {
+    flex-direction: column;
+    a:last-child img {
+      width: 20px;
+    }
     img {
       border-radius: unset;
-      width: initial;
+      width: 18px;
       &:hover {
         opacity: .4;
       }
@@ -992,7 +1018,7 @@ nav {
   z-index: -4;
   top: 0;
   left: 0;
-  background-image: url('images/hero4.jpg')
+  background-image: url('images/hero5.jpg')
 }
 
 #container>.sketch {

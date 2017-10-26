@@ -38,6 +38,9 @@
             <a class="hash-link" href="#faq">FAQ</a>
           </li>
           <li>
+            <a class="hash-link" href="#team">Team</a>
+          </li>
+          <li>
             <a class="social-link" href="https://facebook.com/cruzhacks" target="_blank">
               <img height="17" src=<%=require( "./images/facebook.svg")%>></a>
           </li>
@@ -64,6 +67,9 @@
             <li class="mobile-nav__item">
               <a class="hash-link" href="#faq">FAQ</a>
             </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="#team">Team</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -77,7 +83,7 @@
         <h2 class="fade-in">Create something that makes
           <br>a difference.</h2>
         <div class="fade-in">
-          <div class="btn--disabled">Apps open in December!</div>
+          <div class="btn--disabled">Apps open in December</div>
         </div>
         <h4 class="fade-in">January 19-21, 2018
           <br>Porter Dining Hall
@@ -238,16 +244,24 @@
               <img alt="Google" src=<%=require( "./images/sponsors/google.svg")%>></a>
             <a href="https://www.microsoft.com/" target="_blank">
               <img alt="Microsoft" src=<%=require( "./images/sponsors/microsoft.svg")%>></a>
+            <a href="http://www.projectyx.com/" target="_blank">
+              <img alt="Project YX" src=<%=require( "./images/sponsors/projectyx.png")%>></a>
             <a href="http://www.santacruztechbeat.com/" target="_blank">
               <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/sponsors/santacruztechbeat.png")%>></a>
             <a href="https://www.meetup.com/santacruznewtech/" target="_blank">
               <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/sponsors/santacruznewtechmeetup.png")%>></a>
             <a href="https://www.bigdatafed.com/" target="_blank">
               <img alt="Big Data Federation" src=<%=require( "./images/sponsors/bigdatafederation.png")%>></a>
+            <a href="#">
+              <img alt="Hack Alumni" src=<%=require( "./images/sponsors/hackalumni.png")%>></a>
             <a href="http://www.swcgcpa.com/" target="_blank">
               <img alt="SWCG" src=<%=require( "./images/sponsors/swcg.png")%>></a>
             <a href="http://www.breretonlawoffice.com/" target="_blank">
               <img alt="Brereton Law Office" src=<%=require( "./images/sponsors/breretonlawoffice.png")%>></a>
+            <a href="http://www.geshergroup.org/" target="_blank">
+              <img alt="Gesher Group" src=<%=require( "./images/sponsors/geshergroup.png")%>></a>
+            <a href="https://www.formulaslug.com/" target="_blank">
+              <img alt="Formula Slug" src=<%=require( "./images/sponsors/formulaslug.jpg")%>></a>
           </div>
         </div>
         <div class="sponsor--cta">
@@ -259,7 +273,7 @@
                 designers, and innovators at this year's hackathon.</p>
             </div>
             <div class="twocol--body">
-              <a class="btn--cta" target="_blank" href=<%=require( "./Sponsorship.pdf")%>>Learn more</a>
+              <a class="btn--cta" target="_blank" href=<%=require( "./Sponsorship.pdf")%>>Learn More</a>
             </div>
           </div>
         </div>
@@ -267,7 +281,7 @@
         <div class="schedule--container">
           <div class="schedule--col">
             <h3>Friday</h3>
-            <h4>January 20, 2017</h4>
+            <h4>January 19, 2017</h4>
             <div>
               <span class="schedule--block">8:00pm</span> - Sponsor Setup. Special parking permits will be provided.</div>
             <div>
@@ -277,34 +291,30 @@
           </div>
           <div class="schedule--col">
             <h3>Saturday</h3>
-            <h4>January 21, 2017</h4>
+            <h4>January 20, 2017</h4>
             <div>
-              <span class="schedule--block">12:00am</span> -
-              <strong>HACK!</strong>
+              <span class="schedule--block">12:00am</span> - HACK!
             </div>
             <div>
               <span class="schedule--block">8:00am</span> - Breakfast</div>
             <div>
-              <span class="schedule--block">10:00am</span> -
-              <strong>Devpost submission creation</strong>
+              <span class="schedule--block">10:00am</span> - Devpost submission creation
             </div>
             <div>
               <span class="schedule--block">12:00pm</span> - Lunch</div>
             <div>
-              <span class="schedule--block">6:00pm</span> -
-              <strong>Devpost submission for categories due</strong>
+              <span class="schedule--block">6:00pm</span> - Devpost submission for categories due
             </div>
             <div>
               <span class="schedule--block">8:00pm</span> - Dinner</div>
           </div>
           <div class="schedule--col">
             <h3>Sunday</h3>
-            <h4>January 22, 2017</h4>
+            <h4>January 21, 2017</h4>
             <div>
               <span class="schedule--block">8:00am</span> - Breakfast</div>
             <div>
-              <span class="schedule--block">12:00pm</span> -
-              <strong>Code Freeze</strong>, Lunch</div>
+              <span class="schedule--block">12:00pm</span> - Code Freeze, Lunch</div>
             <div>
               <span class="schedule--block">1:00pm</span> - Round 1 Judging</div>
             <div>
@@ -317,9 +327,9 @@
               <span class="schedule--block">5:30pm</span> - Awards Ceremony</div>
           </div>
         </div>
-        <h2 id="faq" class="center">CruzHacks in the Media</h2>
+        <h2 id="media" class="center">CruzHacks in the Media</h2>
         <div class="news--container">
-          <a href="https://news.ucsc.edu/2017/01/hackathon.html" target="_blank">
+          <!--<a href="https://news.ucsc.edu/2017/01/hackathon.html" target="_blank">
             <div class=" card newscard ">
               <img height=60 src=<%=require( './images/news-hero-2.jpg')%>>
               <div class="newscard--body">
@@ -327,7 +337,7 @@
                 <h5>—UC Newscenter</h5>
               </div>
             </div>
-          </a>
+          </a>-->
           <a href="http://www.santacruztechbeat.com/2017/07/19/hack-ucsc-rebrands-cruzhacks-2018/" target="_blank">
             <div class="card newscard">
               <img height=60 src=<%=require( './images/news-hero-1.jpg')%>>
@@ -337,12 +347,12 @@
               </div>
             </div>
           </a>
-          <a href="http://www.santacruzsentinel.com/social-affairs/20170119/uc-santa-cruz-hackathon-expects-record-attendance" target="_blank">
+          <a href="http://www.santacruztechbeat.com/2017/01/26/red-bull-pizza-fuels-hack-ucsc-2017/" target="_blank">
             <div class="card newscard">
               <img height=60 src=<%=require( './images/news-hero-3.jpg')%>>
               <div class="newscard--body">
-                <h4>UC Santa Cruz Hackathon expects record attendance</h4>
-                <h5>—Santa Cruz Sentinel</h5>
+                <h4>Red Bull & Pizza Fuels Hack UCSC 2017</h4>
+                <h5>—Santa Cruz Tech Beat</h5>
               </div>
             </div>
           </a>
@@ -390,7 +400,7 @@
 
             <div class="card--faq">
               <h4>How can I become a sponsor?</h4>
-              <p>Amazing! Our sponsor pamphlet can be found
+              <p>Our sponsor pamphlet can be found
                 <a target="_blank" href=<%=require( "./Sponsorship.pdf")%>>here.</a> Please also contact Anjali, our sponsorship expert, at
                 <a target="_blank" href="mailto:akanthil@ucsc.edu">akanthil@ucsc.edu</a> and we can discuss the best way for your organization to get involved!</p>
             </div>
@@ -398,7 +408,7 @@
           <div class="faq--col">
             <div class="card--faq">
               <h4>How​ ​can​ ​I​ ​keep​ ​up​ ​to​ ​date​ ​on​ ​CruzHacks​ ​2018​ ​news?</h4>
-              <p>Join our Facebook group
+              <p>Follow our Facebook page
                 <a target="_blank" href="https://facebook.com/cruzhacks">here!</a> This is also a great place to find other hackers to team​ ​with,​ ​or​ ​explore​ ​ideas​ ​on​ ​what​
                 ​to​ ​build.</p>
             </div>
@@ -431,7 +441,7 @@
             </div>
             <div class="card--faq">
               <h4>How can I become a mentor or judge?</h4>
-              <p>Stupendous! We would love to have you as a mentor or judge. More information will be coming in December!</p>
+              <p>We would love to have you as a mentor or judge. More information will be coming in November!</p>
             </div>
           </div>
         </div>
@@ -439,28 +449,13 @@
           <h2 id="contact" class="center">Have any other questions?</h2>
           <p class="center">Any questions that weren't answered above? Feel free to email us
             <a href="mailto:akanthil@ucsc.edu" target="_blank">here</a> or reach out to us on
-            <a href="https://www.facebook.com/CruzHacks" target="_blank">Facebook</a> or
-            <a href="https://www.twitter.com/CruzHacks" target="_blank">Twitter</a>!
+            <a href="https://www.facebook.com/CruzHacks" target="_blank">Facebook</a>!
           </p>
         </div>
       </div>
       <h2 id="team" class="center">Meet the organizing team!</h2>
       <div class="team--container">
         <div class="team--section">
-          <div class="member">
-            <img src=<%=require( "./images/team/anjali.jpg")%>>
-            <div>
-              <h3>Anjali Kanthilal</h3>
-              <p>Executive Director</p>
-            </div>
-            <div class="separator hide-mobile"></div>
-            <div class="social">
-              <a target="_blank" href="https://linkedin.com/in/anjalikanthilal">
-                <img src=<%=require( "./images/linkedin.svg")%>></a>
-              <a target="_blank" href="mailto:akanthil@ucsc.edu">
-                <img height=30 src=<%=require( "./images/email.svg")%>></a>
-            </div>
-          </div>
           <div class="member">
             <img src=<%=require( "./images/team/zimraan.jpg")%>>
             <div>
@@ -475,19 +470,33 @@
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
-        </div>
-        <div class="team--section">
           <div class="member">
-            <img src=<%=require( "./images/team/greg.jpg")%>>
+            <img src=<%=require( "./images/team/anjali.jpg")%>>
             <div>
-              <h3>Greg Wolff</h3>
-              <p>Director of Design</p>
+              <h3>Anjali Kanthilal</h3>
+              <p>Executive Director</p>
             </div>
             <div class="separator hide-mobile"></div>
             <div class="social">
-              <a target="_blank" href="https://www.linkedin.com/in/gregwwolff/">
+              <a target="_blank" href="https://linkedin.com/in/anjalikanthilal">
                 <img src=<%=require( "./images/linkedin.svg")%>></a>
-              <a target="_blank" href="mailto:gregwwolff@gmail.com">
+              <a target="_blank" href="mailto:akanthil@ucsc.edu">
+                <img height=30 src=<%=require( "./images/email.svg")%>></a>
+            </div>
+          </div>
+        </div>
+        <div class="team--section">
+          <div class="member">
+            <img src=<%=require( "./images/team/sarah.jpg")%>>
+            <div>
+              <h3>Sarah Ali</h3>
+              <p>Editor-In-Chief</p>
+            </div>
+            <div class="separator hide-mobile"></div>
+            <div class="social">
+              <a target="_blank" href="https://www.linkedin.com/in/sarah-ali-4a031310b/">
+                <img src=<%=require( "./images/linkedin.svg")%>></a>
+              <a target="_blank" href="mailto:sagali@ucsc.edu">
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
@@ -520,20 +529,6 @@
             </div>
           </div>
           <div class="member">
-            <img src=<%=require( "./images/team/sarah.jpg")%>>
-            <div>
-              <h3>Sarah Ali</h3>
-              <p>Editor-In-Chief</p>
-            </div>
-            <div class="separator hide-mobile"></div>
-            <div class="social">
-              <a target="_blank" href="https://www.linkedin.com/in/sarah-ali-4a031310b/">
-                <img src=<%=require( "./images/linkedin.svg")%>></a>
-              <a target="_blank" href="mailto:sagali@ucsc.edu">
-                <img height=30 src=<%=require( "./images/email.svg")%>></a>
-            </div>
-          </div>
-          <div class="member">
             <img src=<%=require( "./images/team/anisha.jpg")%>>
             <div>
               <h3>Anisha Trivedi</h3>
@@ -547,22 +542,22 @@
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
-        </div>
-        <div class="team--section">
           <div class="member">
-            <img src=<%=require( "./images/team/hector.jpg")%>>
+            <img src=<%=require( "./images/team/greg.jpg")%>>
             <div>
-              <h3>Hector Briseno</h3>
-              <p>Logistics Lead</p>
+              <h3>Greg Wolff</h3>
+              <p>Director of Design</p>
             </div>
             <div class="separator hide-mobile"></div>
             <div class="social">
-              <a target="_blank" href="https://www.linkedin.com/in/hector-briseno-254379141/">
+              <a target="_blank" href="https://www.linkedin.com/in/gregwwolff/">
                 <img src=<%=require( "./images/linkedin.svg")%>></a>
-              <a target="_blank" href="mailto:hbriseno@ucsc.edu">
+              <a target="_blank" href="mailto:gregwwolff@gmail.com">
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
+        </div>
+        <div class="team--section">
           <div class="member">
             <img src=<%=require( "./images/team/olivia.jpg")%>>
             <div>
@@ -574,6 +569,20 @@
               <a target="_blank" href="https://www.linkedin.com/in/olivia-ahmed-61bb67135/">
                 <img src=<%=require( "./images/linkedin.svg")%>></a>
               <a target="_blank" href="mailto:omahmed@ucsc.edu">
+                <img height=30 src=<%=require( "./images/email.svg")%>></a>
+            </div>
+          </div>
+          <div class="member">
+            <img src=<%=require( "./images/team/hector.jpg")%>>
+            <div>
+              <h3>Hector Briseno</h3>
+              <p>Logistics Lead</p>
+            </div>
+            <div class="separator hide-mobile"></div>
+            <div class="social">
+              <a target="_blank" href="https://www.linkedin.com/in/hector-briseno-254379141/">
+                <img src=<%=require( "./images/linkedin.svg")%>></a>
+              <a target="_blank" href="mailto:hbriseno@ucsc.edu">
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
@@ -620,20 +629,6 @@
             </div>
           </div>
           <div class="member">
-            <img src=<%=require( "./images/team/karthik.jpg")%>>
-            <div>
-              <h3>Karthik Manickam</h3>
-              <p>Development Lead</p>
-            </div>
-            <div class="separator hide-mobile"></div>
-            <div class="social">
-              <a target="_blank" href="https://www.linkedin.com/in/karthik-manickam/">
-                <img src=<%=require( "./images/linkedin.svg")%>></a>
-              <a target="_blank" href="mailto:kamanick@ucsc.edu">
-                <img height=30 src=<%=require( "./images/email.svg")%>></a>
-            </div>
-          </div>
-          <div class="member">
             <img src=<%=require( "./images/team/kristine.jpg")%>>
             <div>
               <h3>Kristine Nguyen</h3>
@@ -661,21 +656,35 @@
                 <img height=30 src=<%=require( "./images/email.svg")%>></a>
             </div>
           </div>
+          <div class="member">
+            <img src=<%=require( "./images/team/karthik.jpg")%>>
+            <div>
+              <h3>Karthik Manickam</h3>
+              <p>Development Lead</p>
+            </div>
+            <div class="separator hide-mobile"></div>
+            <div class="social">
+              <a target="_blank" href="https://www.linkedin.com/in/karthik-manickam/">
+                <img src=<%=require( "./images/linkedin.svg")%>></a>
+              <a target="_blank" href="mailto:kamanick@ucsc.edu">
+                <img height=30 src=<%=require( "./images/email.svg")%>></a>
+            </div>
+          </div>
         </div>
       </div>
       <h2 id="team" class="center">Advisory Committee</h2>
       <div class="team--container">
         <div class="member">
-          <img src=<%=require( "./images/team/sukh.jpg")%>>
+          <img src=<%=require( "./images/team/lena.jpg")%>>
           <div>
-            <h3>Sukh Singh</h3>
-            <p>CEO of Code Naturally</p>
+            <h3>Lena Bacon</h3>
+            <p>President of Gesher Group</p>
           </div>
           <div class="separator hide-mobile"></div>
           <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/sukhmeets">
+            <a target="_blank" href="https://www.linkedin.com/in/lenabacon/">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:sukhsingh@codenaturally.com">
+            <a target="_blank" href="mailto:lenabacon@gmail.com">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
@@ -694,20 +703,6 @@
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/lena.jpg")%>>
-          <div>
-            <h3>Lena Bacon</h3>
-            <p>President of Gesher Group</p>
-          </div>
-          <div class="separator hide-mobile"></div>
-          <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/lenabacon/">
-              <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:lenabacon@gmail.com">
-              <img height=30 src=<%=require( "./images/email.svg")%>></a>
-          </div>
-        </div>
-        <div class="member">
           <img src=<%=require( "./images/team/kevin.jpg")%>>
           <div>
             <h3>Kevin Viet Le</h3>
@@ -721,9 +716,37 @@
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
+        <div class="member">
+          <img src=<%=require( "./images/team/sukh.jpg")%>>
+          <div>
+            <h3>Sukh Singh</h3>
+            <p>CEO of Code Naturally</p>
+          </div>
+          <div class="separator hide-mobile"></div>
+          <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/sukhmeets">
+              <img src=<%=require( "./images/linkedin.svg")%>></a>
+            <a target="_blank" href="mailto:sukhsingh@codenaturally.com">
+              <img height=30 src=<%=require( "./images/email.svg")%>></a>
+          </div>
+        </div>
       </div>
       <h2 id="team" class="center">Board of Directors</h2>
       <div class="team--container">
+        <div class="member">
+          <img src=<%=require( "./images/team/sue.jpg")%>>
+          <div>
+            <h3>Sue Carter</h3>
+            <p>Director of CIED at UCSC</p>
+          </div>
+          <div class="separator hide-mobile"></div>
+          <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/sue-carter-329a704">
+              <img src=<%=require( "./images/linkedin.svg")%>></a>
+            <a target="_blank" href="mailto:sacarter@ucsc.edu">
+              <img height=30 src=<%=require( "./images/email.svg")%>></a>
+          </div>
+        </div>
         <div class="member">
           <img src=<%=require( "./images/team/bud.jpg")%>>
           <div>
@@ -753,16 +776,16 @@
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/sue.jpg")%>>
+          <img src=<%=require( "./images/team/tomer.jpg")%>>
           <div>
-            <h3>Sue Carter</h3>
-            <p>Director of CIED at UCSC</p>
+            <h3>Tomer Kagan</h3>
+            <p>CEO of Sigma</p>
           </div>
           <div class="separator hide-mobile"></div>
           <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/sue-carter-329a704">
+            <a target="_blank" href="https://www.linkedin.com/in/tomerkagan">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:sacarter@ucsc.edu">
+            <a target="_blank" href="mailto:gradish@gmail.com ">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
@@ -777,20 +800,6 @@
             <a target="_blank" href="https://www.linkedin.com/in/sonya-newlyn-66250b6">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
             <a target="_blank" href="mailto:snewlyn@ucsc.edu">
-              <img height=30 src=<%=require( "./images/email.svg")%>></a>
-          </div>
-        </div>
-        <div class="member">
-          <img src=<%=require( "./images/team/tomer.jpg")%>>
-          <div>
-            <h3>Tomer Kagan</h3>
-            <p>CEO of Sigma</p>
-          </div>
-          <div class="separator hide-mobile"></div>
-          <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/tomerkagan">
-              <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:gradish@gmail.com ">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>
@@ -819,7 +828,7 @@
           <img height=30 src=<%=require( "./images/email.svg")%>></a>
       </div>
     </div>
-    <p>Made with ♥ in Santa Cruz</p>
+    <p>Made with ♥ in Santa Cruz by <a href="https://linkedin.com/in/gregwwolff">Greg Wolff</p>
   </footer>
 
 </body>
