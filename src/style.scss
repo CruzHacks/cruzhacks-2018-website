@@ -716,12 +716,14 @@ nav {
 #schedule,
 #faq,
 #contact,
+#media,
 #team {
   margin: 80px 0 30px;
 }
 
 #stories,
 #sponsors,
+#media,
 #faq {
   @media (max-width: $br-medium) {
     margin-top: 40px;
@@ -1023,7 +1025,7 @@ nav {
   z-index: -4;
   top: 0;
   left: 0;
-  background-image: url('images/hero5.jpg')
+  background-image: url('images/hero4.jpg')
 }
 
 #container>.sketch {
