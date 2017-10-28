@@ -1125,6 +1125,6 @@ footer {
 
 #mlh-trust-badge {
   @media (max-width: $br-medium) {
-    display: none;
+    display: none !important;
   }
 }
