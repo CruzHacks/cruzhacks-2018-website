@@ -1122,3 +1122,9 @@ footer {
   text-align: center;
   margin: 0 auto;
 }
+
+#mlh-trust-badge {
+  @media (max-width: $br-medium) {
+    display: none;
+  }
+}
