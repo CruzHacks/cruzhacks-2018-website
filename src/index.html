@@ -85,6 +85,23 @@
           <br>a difference.</h2>
         <div class="fade-in">
           <div class="btn--disabled">Apps open in December</div>
+          <div class="notifications notifications--cta">
+            <img src="https://icongr.am/feather/mail.svg?size=15&color=cac2ea"> Get notified?
+          </div>
+          <div id="form-messages"></div>
+          <form id="contact-form" class="notifications" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdvtca2rePtj_jsTvETu5x1dkc3Ph-_r21EY0UsfrfsfK36BA/formResponse?"
+            target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="field">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="entry.59051084" required>
+            </div>
+            <div class="field">
+              <button type="submit">
+                <img src="https://icongr.am/feather/arrow-right.svg?size=15&color=cac2ea">
+              </button>
+            </div>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
         <h4 class="fade-in">January 19-21, 2018
           <br>Porter Dining Hall
@@ -259,6 +276,8 @@
               <img alt="Hack Alumni" src=<%=require( "./images/sponsors/hackalumni.png")%>></a>
             <a href="https://cied.ucsc.edu/" target="_blank">
               <img alt="CIED" src=<%=require( "./images/sponsors/cied.png")%>></a>
+            <a href="https://sua.ucsc.edu/" target="_blank">
+              <img alt="Student Union Assembly" height=50 src=<%=require( "./images/sponsors/sua.png")%>></a>
             <a href="http://www.swcgcpa.com/" target="_blank">
               <img alt="SWCG" src=<%=require( "./images/sponsors/swcg.png")%>></a>
             <a href="http://www.breretonlawoffice.com/" target="_blank">
@@ -832,6 +851,7 @@
     <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season"
       style="width:100%">
   </a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>

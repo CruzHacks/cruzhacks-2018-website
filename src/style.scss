@@ -316,12 +316,62 @@ nav {
     }
     h2 {
       color: white;
-      margin: 5px 0 50px;
+      margin: 5px 0 40px;
       font-size: 1.3em;
     }
     h4 {
-      margin: 30px 0 0;
+      margin: 22px 0 0;
       color: white;
+    }
+    .notifications {
+      font-weight: 100;
+      cursor: pointer;
+      font-size: 0.7em;
+      color: #cac2ea;
+      display: flex;
+      margin: 16px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      &--cta {
+        margin-bottom: 32px;
+        &:hover {
+          opacity: .9;
+        }
+      }
+      img {
+        width: initial;
+        height: initial;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        margin-bottom: initial;
+      }
+    }
+    #form-messages {
+      display: none;
+      margin-bottom: 34px;
+    }
+    #contact-form {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      input[type="email"] {
+        background: rgba(255, 255, 255, .2);
+        border: 1px solid rgba(255, 255, 255, .3);
+        outline: none;
+        border-radius: 3px;
+        padding: 6px 12px;
+        margin: 0 7px;
+        color: white;
+        font-family: 'GR';
+        font-weight: 100;
+      }
+      button {
+        background: none;
+        border: none;
+        outline: none;
+        padding: 2px 0 0 0;
+      }
     }
     @media (max-width: $br-small) {
       font-size: 0.9em;

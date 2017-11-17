@@ -1,4 +1,6 @@
-import { TweenMax } from 'gsap'
+import {
+  TweenMax
+} from 'gsap'
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 const ScrollMagic = require('ScrollMagic');
 require('animation.gsap');
@@ -32,6 +34,27 @@ TweenMax.delayedCall(0.2, () => {
     y: 0
   }, 0.2)
 })
+
+// Application Reminder Form
+$('.notifications--cta').on('click', () => {
+  $('.notifications--cta').fadeOut(() => {
+    $('#contact-form').css("display", "flex").hide().fadeIn()
+  })
+})
+var form = $('#contact-form')
+var formMessages = $('#form-messages')
+$(form).submit(function (event) {
+  $(form).animate({
+    opacity: 0
+  }, 500, function () {
+    $(form).css('display', 'none')
+    $(formMessages).removeClass('error')
+    $(formMessages).addClass('success')
+    $(formMessages).html('<p class="notifications">Thank you! We\'ll email when applications open.</p>')
+    $(formMessages).fadeIn()
+  })
+})
+
 
 // Scrollmagic card trigger
 var controller = new ScrollMagic.Controller()
@@ -337,8 +360,7 @@ function scrollHandler(scrollpos) {
     header.style.opacity = '1'
     header_wrap.style.height = '50px'
 
-  }
-  else if (scrollpos <= 500) {
+  } else if (scrollpos <= 500) {
     header.style.opacity = '0'
     header_wrap.style.height = '75px'
     //header.style.backgroundColor = 'rgba(255,255,255,0)'

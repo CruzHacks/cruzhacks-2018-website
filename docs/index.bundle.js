@@ -15418,6 +15418,26 @@ __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].delayedCall(0.2, () => {
   }, 0.2);
 });
 
+// Application Reminder Form
+$('.notifications--cta').on('click', () => {
+  $('.notifications--cta').fadeOut(() => {
+    $('#contact-form').css("display", "flex").hide().fadeIn();
+  });
+});
+var form = $('#contact-form');
+var formMessages = $('#form-messages');
+$(form).submit(function (event) {
+  $(form).animate({
+    opacity: 0
+  }, 500, function () {
+    $(form).css('display', 'none');
+    $(formMessages).removeClass('error');
+    $(formMessages).addClass('success');
+    $(formMessages).html('<p class="notifications">Thank you! We\'ll email when applications open.</p>');
+    $(formMessages).fadeIn();
+  });
+});
+
 // Scrollmagic card trigger
 var controller = new ScrollMagic.Controller();
 var stagger = __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].staggerFrom('.card', 0.5, {
