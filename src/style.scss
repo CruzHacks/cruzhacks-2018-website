@@ -304,7 +304,7 @@ nav {
     border-radius: 390px;
     background-color: rgba(255, 255, 255, 0.1);
     z-index: -1;
-    width: 400px;
+    width: 415px;
     text-align: center;
     img {
       width: 110px;
@@ -320,13 +320,13 @@ nav {
       font-size: 1.3em;
     }
     h4 {
-      margin: 22px 0 0;
+      //margin: 22px 0 0;
       color: white;
     }
     .notifications {
       font-weight: 100;
       cursor: pointer;
-      font-size: 0.7em;
+      font-size: 0.8em;
       color: #cac2ea;
       display: flex;
       margin: 16px;
@@ -334,7 +334,7 @@ nav {
       align-items: center;
       justify-content: center;
       &--cta {
-        margin-bottom: 32px;
+        margin-bottom: 42px;
         &:hover {
           opacity: .9;
         }
@@ -343,13 +343,13 @@ nav {
         width: initial;
         height: initial;
         padding-right: 5px;
-        padding-bottom: 2px;
+        padding-bottom: 3px;
         margin-bottom: initial;
       }
     }
     #form-messages {
       display: none;
-      margin-bottom: 34px;
+      margin-bottom: 42px;
     }
     #contact-form {
       display: none;
@@ -361,7 +361,7 @@ nav {
         outline: none;
         border-radius: 3px;
         padding: 6px 12px;
-        margin: 0 7px;
+        margin: 1px 7px 13px;
         color: white;
         font-family: 'GR';
         font-weight: 100;
@@ -370,7 +370,7 @@ nav {
         background: none;
         border: none;
         outline: none;
-        padding: 2px 0 0 0;
+        padding: 0px 7px 9px;
       }
     }
     @media (max-width: $br-small) {
