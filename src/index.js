@@ -55,6 +55,12 @@ $(form).submit(function (event) {
   })
 })
 
+$('.applicants').on('click', () => {
+  $('.applicants').fadeOut(() => {
+    $('.applicants--cta').css("display", "block").hide().fadeIn()
+  })
+})
+
 
 // Scrollmagic card trigger
 var controller = new ScrollMagic.Controller()

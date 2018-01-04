@@ -300,7 +300,7 @@ nav {
   align-items: center;
   justify-content: center;
   &--text {
-    padding: 104px 85px;
+    padding: 93px 85px;
     border-radius: 390px;
     background-color: rgba(255, 255, 255, 0.1);
     z-index: -1;
@@ -386,6 +386,24 @@ nav {
     bottom: 6vh;
     transform: translateX(-50%) !important;
     color: white;
+  }
+}
+
+.applicants {
+  font-weight: 100;
+  cursor: pointer;
+  font-size: 0.8em;
+  color: #cac2ea;
+  margin: 5px 0 16px;
+  &--cta {
+    @extend .applicants;
+    display: none;
+    a {
+      color: #cac2ea;
+      margin: 0 5px;
+      text-decoration: underline;
+      box-shadow: none;
+    }
   }
 }
 
@@ -1077,7 +1095,7 @@ nav {
     padding: 14px 40px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    margin-bottom: 17px;
+    //margin-bottom: 17px;
     transition: all 0.4s cubic-bezier(0.39, 0.01, 0, 0.78);
     &:hover {
       transform: translateY(-2px);

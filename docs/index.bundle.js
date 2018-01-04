@@ -15438,6 +15438,12 @@ $(form).submit(function (event) {
   });
 });
 
+$('.applicants').on('click', () => {
+  $('.applicants').fadeOut(() => {
+    $('.applicants--cta').css("display", "block").hide().fadeIn();
+  });
+});
+
 // Scrollmagic card trigger
 var controller = new ScrollMagic.Controller();
 var stagger = __WEBPACK_IMPORTED_MODULE_0_gsap__["TweenMax"].staggerFrom('.card', 0.5, {
