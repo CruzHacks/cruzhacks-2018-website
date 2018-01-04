@@ -14,6 +14,17 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
+  <!-- Hotjar Tracking Code for https://cruzhacks.com/ -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:734013,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
 </head>
 
 <body>
@@ -84,8 +95,8 @@
         <h2 class="fade-in">Create something that makes
           <br>a difference.</h2>
         <div class="fade-in">
-          <div class="btn--disabled">Apps open in December</div>
-          <div class="notifications notifications--cta">
+          <a href="https://cruzhacks2018.typeform.com/to/Cl4Xzz" class="btn--apply">Apply</a>
+          <!-- <div class="notifications notifications--cta">
             <img src="https://icongr.am/feather/mail.svg?size=14&color=cac2ea"> Get notified?
           </div>
           <div id="form-messages"></div>
@@ -101,14 +112,14 @@
               </button>
             </div>
           </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> -->
         </div>
         <h4 class="fade-in">January 19-21, 2018
           <br>Porter Dining Hall
           <br>Santa Cruz, CA</h4>
       </div>
       <a class="smooth" href="#about">
-        <p class="fade-in small">Learn more</p>
+        <!-- <p class="fade-in small">Learn more</p> -->
         <img class="fade-in arrow" src=<%=require( "./images/arrow.svg")%>>
       </a>
     </div>
@@ -186,6 +197,52 @@
             <img width=380 src=<%=require( "./images/extendnetwork.jpg")%>>
           </div>
         </div>
+        <h2 class="center">Opening and Closing Speakers</h2>
+        <div class="speaker--container">
+         <div class="speaker">
+          <img src=<%=require( "./images/guy.jpg")%>>
+          <div class="speaker--info">
+            <h3>Guy Kawasaki</h3>
+            <h5>Chief Evangelist of Canva</h5>
+            <p>Guy Kawasaki is the chief evangelist of Canva, an online graphic design tool. He is a brand ambassador for Mercedes-Benz
+              and an executive fellow of the UC Berkeley Haas School of Business. He was the chief evangelist of Apple and a trustee
+              of the Wikimedia Foundation.
+            </p>
+          </div>
+        </div>
+        <div class="speaker justify-right">
+          <div class="speaker--info__right">
+            <h3>Toby Corey</h3>
+            <h5>Entrepreneur, Innovator, Disruptor</h5>
+            <p>Toby Corey is a lifelong entrepreneur and innovator, and currently lectures within Stanford’s Department of Management Science
+              and Engineering. He was previously co-founder and president of USWeb, a worldwide leader in internet marketing during the
+              dot-com bubble, and has held executive board positions for Tesla, Buoy Labs, and Inc.
+            </p>
+          </div>
+          <img src=<%=require( "./images/toby.jpg")%>>
+        </div>
+        <div class="speaker">
+          <img src=<%=require( "./images/jeremy.png")%>>
+          <div class="speaker--info">
+            <h3>Jeremy Britton</h3>
+            <h5>Head of Design at Looker</h5>
+            <p>Jeremy Britton is the head of design at Looker, a Santa Cruz based company that aims to provide meaningful data
+              analysis to other businesses. Britton is enthusiastic about integrating software engineering with design, and
+              helped pioneer the UCSC Media and Electronics program.
+            </p>
+          </div>
+        </div>
+        <div class="speaker justify-right">
+          <div class="speaker--info__right">
+            <h3>George Blumenthal</h3>
+            <h5>UC Santa Cruz Chancellor</h5>
+            <p>A strong advocate for technology and entrepreneurship, George Blumenthal is also a board member of Joint Venture
+              Silicon Valley and the Silicon Valley Leadership Group.
+            </p>
+          </div>
+          <img src=<%=require( "./images/blumie.png")%>>
+        </div>
+      </div>
         <h2 id="stories" class="center">Stories from past hackers</h2>
         <div class="persona--container">
           <div class="circle purple"></div>
@@ -201,10 +258,10 @@
               </div>
             </div>
             <p>
-              Even as a regular hackthoner, I still hold CruzHacks as the hackathon that was the most monumental in being able to achieve
-              my goals in my technical career. As a participant,
-              <mark>I learnt so much from the technical mentors and sponsors as well as from my fellow pioneering students from
-                colleges all over the bay.</mark> Without a doubt, CruzHacks has the quintessential spirit of hackathons!
+              CruzHacks shaped key essential technical skills as well as social skills that I use everyday to be a successful software
+              engineer at IBM. Given the opportunity to explore various technologies,<br>
+<mark>I got the chance to learn industry standard tools that I now use in my everyday work.</mark> I learnt so much from the technical
+mentors and sponsors as well as from my fellow pioneering students from college all over the bay.
             </p>
           </div>
           <div class="persona">
@@ -265,16 +322,26 @@
               <img alt="Project YX" src=<%=require( "./images/sponsors/projectyx.png")%>></a>
             <a href="http://www.santacruzworks.org/members/south-swell-ventures" target="_blank">
               <img alt="South Swell Ventures" src=<%=require( "./images/sponsors/southswellventures.png")%>></a>
-            <a href="http://www.santacruztechbeat.com/" target="_blank">
-              <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/sponsors/santacruztechbeat.png")%>></a>
-            <a href="https://www.meetup.com/santacruznewtech/" target="_blank">
-              <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/sponsors/santacruznewtechmeetup.png")%>></a>
-            <a href="https://www.bigdatafed.com/" target="_blank">
-              <img alt="Big Data Federation" src=<%=require( "./images/sponsors/bigdatafederation.png")%>></a>
-            <a href="#">
-              <img alt="Hack Alumni" src=<%=require( "./images/sponsors/hackalumni.png")%>></a>
             <a href="https://cied.ucsc.edu/" target="_blank">
               <img alt="CIED" src=<%=require( "./images/sponsors/cied.png")%>></a>
+            <a href="https://tokbox.com/" target="_blank">
+              <img alt="tokbox" src=<%=require( "./images/sponsors/tokbox.png")%>></a>
+            <a href="https://giving.ucsc.edu/" target="_blank">
+              <img alt="UCSC Foundation" src=<%=require( "./images/sponsors/ucsc-foundation.png")%>></a>
+            <a href="https://www.soe.ucsc.edu" target="_blank">
+              <img alt="BSOE" src=<%=require( "./images/sponsors/bsoe.png")%>></a>
+            <a href="https://www.bigdatafed.com/" target="_blank">
+              <img alt="Big Data Federation" src=<%=require( "./images/sponsors/bigdatafederation.png")%>></a>
+            <a href="http://www.santacruztechbeat.com/" target="_blank">
+              <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/sponsors/santacruztechbeat.png")%>></a>
+            <a href="https://choosesantacruz.com/" target="_blank">
+              <img alt="Choose Santa Cruz" src=<%=require("./images/sponsors/choosesantacruz.png")%>></a>
+            <a href="http://www.wholefoodsmarket.com/" target="_blank">
+              <img alt="Whole Foods" src=<%=require("./images/sponsors/wholefoods.png")%>></a>
+            <a href="https://www.meetup.com/santacruznewtech/" target="_blank">
+              <img alt="Santa Cruz New Tech MeetUp" src=<%=require( "./images/sponsors/santacruznewtechmeetup.png")%>></a>
+            <a href="#">
+              <img alt="Hack Alumni" src=<%=require( "./images/sponsors/hackalumni.png")%>></a>
             <a href="https://sua.ucsc.edu/" target="_blank">
               <img alt="Student Union Assembly" height=50 src=<%=require( "./images/sponsors/sua.png")%>></a>
             <a href="http://www.swcgcpa.com/" target="_blank">
@@ -363,6 +430,15 @@
               </div>
             </div>
           </a>-->
+          <a href="https://news.ucsc.edu/2017/11/hackathon.html" target="_blank">
+            <div class=" card newscard ">
+              <img height=60 src=<%=require( './images/news-hero-2.jpg')%>>
+              <div class="newscard--body">
+                <h4>Student-run hackathon scheduled for January 19-21</h4>
+                <h5>—UC Newscenter</h5>
+              </div>
+            </div>
+          </a>
           <a href="http://www.santacruztechbeat.com/2017/07/19/hack-ucsc-rebrands-cruzhacks-2018/" target="_blank">
             <div class="card newscard">
               <img height=60 src=<%=require( './images/news-hero-1.jpg')%>>
@@ -468,7 +544,16 @@
             </div>
             <div class="card--faq">
               <h4>How can I become a mentor or judge?</h4>
-              <p>We would love to have you as a mentor or judge. More information will be coming in November!</p>
+              <p>We would love to have you as a mentor or judge. Judges can apply
+                <a href="https://cruzhacks2018.typeform.com/to/MCQJbg">here</a>, and mentors can apply
+                <a href="https://cruzhacks2018.typeform.com/to/KknGo1">here.</a>
+              </p>
+            </div>
+            <div class="card--faq">
+              <h4>I'd like to help out!</h4>
+              <p>If you're interested in volunteering for this year's hackathon, sign up 
+                <a href="https://cruzhacks2018.typeform.com/to/N2bUeA">here</a>!
+              </p>
             </div>
           </div>
         </div>
@@ -789,16 +874,16 @@
           </div>
         </div>
         <div class="member">
-          <img src=<%=require( "./images/team/tomer.jpg")%>>
+          <img src=<%=require( "./images/team/mark.jpg")%>>
           <div>
-            <h3>Tomer Kagan</h3>
-            <p>CEO of Sigma</p>
+            <h3>Mark Adams</h3>
+            <p>Founder of Ottm</p>
           </div>
           <div class="separator hide-mobile"></div>
           <div class="social">
-            <a target="_blank" href="https://www.linkedin.com/in/tomerkagan">
+            <a target="_blank" href="https://www.linkedin.com/in/adamsmarkrichard/">
               <img src=<%=require( "./images/linkedin.svg")%>></a>
-            <a target="_blank" href="mailto:gradish@gmail.com ">
+            <a target="_blank" href="mailto:mark@getottm.com">
               <img height=30 src=<%=require( "./images/email.svg")%>></a>
           </div>
         </div>

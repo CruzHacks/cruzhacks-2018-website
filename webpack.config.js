@@ -70,7 +70,9 @@ module.exports = {
       },
       template: './src/index.html'
     }),
-    new ExtractTextPlugin("style.css"),
+    new ExtractTextPlugin({
+      filename: 'style.[contenthash].css'
+    }),
     new OptimizeCssAssetsPlugin({
       cssProcessorOptions: {
         discardComments: {
