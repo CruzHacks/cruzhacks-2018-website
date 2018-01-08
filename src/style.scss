@@ -346,6 +346,13 @@ nav {
         padding-bottom: 3px;
         margin-bottom: initial;
       }
+      &--alert {
+        @extend .notifications;
+        color: #ffc7c7;
+        cursor: default;
+        font-size: 1em;
+        margin: 0 0 5px 0;
+      }
     }
     #form-messages {
       display: none;
