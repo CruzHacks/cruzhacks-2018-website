@@ -316,7 +316,7 @@ nav {
     }
     h2 {
       color: white;
-      margin: 5px 0 15px;
+      margin: 5px 0 26px;
       font-size: 1.3em;
     }
     h4 {
@@ -401,7 +401,7 @@ nav {
   cursor: pointer;
   font-size: 0.8em;
   color: #cac2ea;
-  margin: 5px 0 16px;
+  margin: 17px 0 24px;
   &--cta {
     @extend .applicants;
     display: none;
@@ -1183,6 +1183,7 @@ nav {
   z-index: -4;
   top: 0;
   left: 0;
+  background-size: cover;
   background-image: url('images/hero4.jpg')
 }
 
