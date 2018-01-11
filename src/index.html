@@ -16,14 +16,20 @@
   </title>
   <!-- Hotjar Tracking Code for https://cruzhacks.com/ -->
   <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:734013,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 734013,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
 </head>
 
@@ -99,9 +105,12 @@
             <img src="https://icongr.am/feather/alert-circle.svg?size=20&color=ffc7c7"> Applications due tonight!
           </div>-->
           <div href="https://cruzhacks2018.typeform.com/to/Cl4Xzz" class="btn--disabled">Applications closed</div>
-          <p class="applicants">Apply as a mentor/judge?</p>
-          <p class="applicants--cta"><a href="https://cruzhacks2018.typeform.com/to/KknGo1">Mentor</a><a href="https://cruzhacks2018.typeform.com/to/MCQJbg">Judge</a></p>
-          <!--<div class="notifications notifications--cta">
+          <!--<p class="applicants">Apply as a mentor/judge?</p>
+          <p class="applicants--cta">
+            <a href="https://cruzhacks2018.typeform.com/to/KknGo1">Mentor</a>
+            <a href="https://cruzhacks2018.typeform.com/to/MCQJbg">Judge</a>
+          </p>
+          <div class="notifications notifications--cta">
             <img src="https://icongr.am/feather/mail.svg?size=14&color=cac2ea"> Get notified?
           </div>
           <div id="form-messages"></div>
@@ -204,52 +213,155 @@
         </div>
         <h2 class="center">Opening and Closing Speakers</h2>
         <div class="speaker--container">
-         <div class="speaker">
-          <img src=<%=require( "./images/guy.jpg")%>>
-          <div class="speaker--info">
-            <h3>Guy Kawasaki</h3>
-            <h5>Chief Evangelist of Canva</h5>
-            <p>Guy Kawasaki is the chief evangelist of Canva, an online graphic design tool. He is a brand ambassador for Mercedes-Benz
-              and an executive fellow of the UC Berkeley Haas School of Business. He was the chief evangelist of Apple and a trustee
-              of the Wikimedia Foundation.
-            </p>
+          <div class="speaker">
+            <img src=<%=require( "./images/guy.jpg")%>>
+            <div class="speaker--info">
+              <h3>Guy Kawasaki</h3>
+              <h5>Chief Evangelist of Canva</h5>
+              <p>Guy Kawasaki is the chief evangelist of Canva, an online graphic design tool. He is a brand ambassador for
+                Mercedes-Benz and an executive fellow of the UC Berkeley Haas School of Business. He was the chief evangelist
+                of Apple and a trustee of the Wikimedia Foundation.
+              </p>
+            </div>
+          </div>
+          <div class="speaker justify-right">
+            <div class="speaker--info__right">
+              <h3>Toby Corey</h3>
+              <h5>Entrepreneur, Innovator, Disruptor</h5>
+              <p>Toby Corey is a lifelong entrepreneur and innovator. He currently lectures at Stanford University in the Management,
+                Science and Engineering college. Corey was previously a Tesla and SolarCity executive, and co-founded and
+                lead USWeb—the leading Web developer—to a successful IPO. He sits on the boards of Buoy, Advanced MicroGrid
+                Services, and WildLifeDirect (former board member) with Chairman Dr. Richard Leakey. Corey is on the advisory
+                boards of Inboard, Ya Doggie, CruzFoam, and working on his new stealth-mode start-up.
+              </p>
+            </div>
+            <img src=<%=require( "./images/toby.jpg")%>>
+          </div>
+          <div class="speaker">
+            <img src=<%=require( "./images/jeremy.jpg")%>>
+            <div class="speaker--info">
+              <h3>Jeremy Britton</h3>
+              <h5>Head of Design at Looker</h5>
+              <p>Jeremy Britton is the head of design at Looker, a Santa Cruz based company that aims to provide meaningful
+                data analysis to other businesses. Britton is enthusiastic about integrating software engineering with design,
+                and helped pioneer the UCSC Media and Electronics program.
+              </p>
+            </div>
+          </div>
+          <div class="speaker justify-right">
+            <div class="speaker--info__right">
+              <h3>George Blumenthal</h3>
+              <h5>UC Santa Cruz Chancellor</h5>
+              <p>A strong advocate for technology and entrepreneurship, George Blumenthal is also a board member of Joint Venture
+                Silicon Valley and the Silicon Valley Leadership Group.
+              </p>
+            </div>
+            <img src=<%=require( "./images/blumie.png")%>>
           </div>
         </div>
-        <div class="speaker justify-right">
-          <div class="speaker--info__right">
-            <h3>Toby Corey</h3>
-            <h5>Entrepreneur, Innovator, Disruptor</h5>
-            <p>Toby Corey is a lifelong entrepreneur and innovator. He currently lectures at Stanford University in the Management, Science
-              and Engineering college. Corey was previously a Tesla and SolarCity executive, and co-founded and lead USWeb—the leading
-              Web developer—to a successful IPO. He sits on the boards of Buoy, Advanced MicroGrid Services, and WildLifeDirect (former
-              board member) with Chairman Dr. Richard Leakey. Corey is on the advisory boards of Inboard, Ya Doggie, CruzFoam, and working
-              on his new stealth-mode start-up.
-            </p>
+        <!--<h2 id="categories" class="center">Categories and Prizes</h2>
+        <div class="cat--container">
+          <div class="cat--main">
+            <div class="cat">
+              <h3>Innovation</h3>
+              <p>Do you have an amazing idea for a future best-selling product? This is your time to shine.</p>
+              <ol class="cat--prizes">
+                <li>1
+                  <sup>st</sup> Place: $250</li>
+                <li>2
+                  <sup>nd</sup> Place: $100</li>
+                <li>3
+                  <sup>rd</sup> Place: $50</li>
+              </ol>
+            </div>
+            <div class="cat">
+              <h3>Tech Cares</h3>
+              <p>Are you passionate about what technology can do to help in your society? Look no further.</p>
+              <ol class="cat--prizes">
+                <li>1
+                  <sup>st</sup> Place: $250</li>
+                <li>2
+                  <sup>nd</sup> Place: $100</li>
+                <li>3
+                  <sup>rd</sup> Place: $50</li>
+              </ol>
+            </div>
           </div>
-          <img src=<%=require( "./images/toby.jpg")%>>
-        </div>
-        <div class="speaker">
-          <img src=<%=require( "./images/jeremy.jpg")%>>
-          <div class="speaker--info">
-            <h3>Jeremy Britton</h3>
-            <h5>Head of Design at Looker</h5>
-            <p>Jeremy Britton is the head of design at Looker, a Santa Cruz based company that aims to provide meaningful data
-              analysis to other businesses. Britton is enthusiastic about integrating software engineering with design, and
-              helped pioneer the UCSC Media and Electronics program.
-            </p>
+          <div class="cat--sponsor">
+            <div class="cat">
+              <h3>Tokbox's Best Live Video Application</h3>
+              <p>TokBox is the leading global Live Video Platform for web and mobile apps. We help developers build online customer
+                experiences incorporating live video, screen sharing, messaging and recording to enhance user engagement
+                and increase accessibility and reach. The TokBox API builds on WebRTC and is available for JavaScript (browsers),
+                iOS, Android, Mac and Windows. The TokBox platform (PaaS) scales from one-to-one video interactions to large
+                multi-party video chat sessions to interactive broadcasts to huge audiences, including concurrent streaming
+                to Facebook, YouTube and Twitch. TokBox is trusted by thousands of global customers including leading social
+                media apps and industry apps in Healthcare, eLearning, Financial Services and Entertainment.</p>
+              <ol class="cat--prizes">
+                <li>Winner: $250 in gift cards</li>
+              </ol>
+            </div>
+            <div class="cat">
+              <h3>UCSC Arts Division's Creative Entrepreneurship</h3>
+              <p>Artists are natural entrepreneurs. They are creative. They are disruptors. They take initiative. They implement
+                enduring change. They bring others along. They make something new and put it out in the world, over and over
+                again. The entrepreneurial mindset positions the artist as potentially instrumental in every facet of human
+                endeavor. Equally important, the vision, creativity and problem-solving abilities artists possess are invaluable
+                assets for solving the countless problems we face as a society and for advancing a competitive culture of
+                innovation.</p>
+              <p>Judging Criteria: Does the project attempt to solve a problem facing society (large or small scale)? How creative
+                and entrepreneurial is the project? Does the project inspire creativity in others?</p>
+              <ol class="cat--prizes">
+                <li>1
+                  <sup>st</sup> Place: $1000 and lunch meeting with Dean of the Arts, Susan Solt (and relevant faculty) to further
+                  explore creative entrepreneurship
+                </li>
+                <li>2
+                  <sup>nd</sup> Place: $500 and lunch meeting with Dean of the Arts, Susan Solt (and relevant faculty) to further
+                  explore creative entrepreneurship</li>
+              </ol>
+            </div>
+            <div class="cat">
+              <h3>Hack Alumni's Keeping’ It Weird</h3>
+              <p>Santa Cruz is full of weird and wonderful folks and we want to represent that weird spirit at CruzHacks! This
+                category is for you if you want let out your kooky mad scientist go free and build something weird! We are
+                looking for people to explore, experiment and have fun with tech!</p>
+              <p>Judging Criteria:
+                <br>- How well it works? Actually has to do something. At least 24 hours of effort. Button presses, mouse clicks
+                and touch surface swipes lead to things happening! (Not including your project crashing. Which is something
+                to avoid.)
+                <br>- Weirdness Something unexpected. Original. Sounds like something found on the Onion yet it’s real! You made
+                it!
+                <br>- Usefulness Must be useful to someone. It can be useful to a small subset of people like your friends! (Or
+                your dog! Woof!) It might not ever be mainstream, but somewhere, out there, someone really needs your weird
+                project!
+                <br>- Must be appropriate nothing illegal or too inappropriate. You can proudly show this off to your mom! (Or
+                maybe not.) Won’t get you (or we poor sponsors) fired at work for. Nothing racist/sexist/discriminatory/controversial
+                stuff. No parodies of current products. Spin-offs are okay but the project should actually work and can be
+                used in real life as if it was a separate product.</p>
+              <ol class="cat--prizes">
+                <li>Winner: UDI U818A HD+ Drone, Brookstone Wireless Cat Headphones, $25 Amazon gift card per team member</li>
+              </ol>
+            </div>
+            <div class="cat">
+              <h3>Choose Santa Cruz's Tech Transfer Bonus Prize</h3>
+              <p>This bonus prize will go to a team with high potential for commercialization of their idea. The team will receive
+                3-months of expert mentorship through the Santa Cruz Works Accelerator program. Expert mentors will work
+                with the awarded HACK team to assess the viability of the idea, find product-market fit, develop a value
+                proposition, and provide direction for the next stages of the startup process.</p>
+              <ol class="cat--prizes">
+                <li>Winner: UDI U818A HD+ Drone, Brookstone Wireless Cat Headphones, $25 Amazon gift card per team member</li>
+              </ol>
+            </div>
+            <div class="cat">
+              <h3>Divison of Graduate Studies' Best Hack by a UCSC Graduate Student</h3>
+              <ol class="cat--prizes">
+                <li>$2000 summer fellowship</li>
+              </ol>
+            </div>
           </div>
-        </div>
-        <div class="speaker justify-right">
-          <div class="speaker--info__right">
-            <h3>George Blumenthal</h3>
-            <h5>UC Santa Cruz Chancellor</h5>
-            <p>A strong advocate for technology and entrepreneurship, George Blumenthal is also a board member of Joint Venture
-              Silicon Valley and the Silicon Valley Leadership Group.
-            </p>
-          </div>
-          <img src=<%=require( "./images/blumie.png")%>>
-        </div>
-      </div>
+        </div>-->
+
         <h2 id="stories" class="center">Stories from past hackers</h2>
         <div class="persona--container">
           <div class="circle purple"></div>
@@ -266,9 +378,11 @@
             </div>
             <p>
               CruzHacks shaped key essential technical skills as well as social skills that I use everyday to be a successful software
-              engineer at IBM. Given the opportunity to explore various technologies,<br>
-<mark>I got the chance to learn industry standard tools that I now use in my everyday work.</mark> I learnt so much from the technical
-mentors and sponsors as well as from my fellow pioneering students from college all over the bay.
+              engineer at IBM. Given the opportunity to explore various technologies,
+              <br>
+              <mark>I got the chance to learn industry standard tools that I now use in my everyday work.</mark> I learnt so much
+              from the technical mentors and sponsors as well as from my fellow pioneering students from college all over
+              the bay.
             </p>
           </div>
           <div class="persona">
@@ -342,9 +456,9 @@ mentors and sponsors as well as from my fellow pioneering students from college 
             <a href="http://www.santacruztechbeat.com/" target="_blank">
               <img alt="Santa Cruz Tech Beat" src=<%=require( "./images/sponsors/santacruztechbeat.png")%>></a>
             <a href="https://choosesantacruz.com/" target="_blank">
-              <img alt="Choose Santa Cruz" src=<%=require("./images/sponsors/choosesantacruz.png")%>></a>
+              <img alt="Choose Santa Cruz" src=<%=require( "./images/sponsors/choosesantacruz.png")%>></a>
             <a href="http://www.wholefoodsmarket.com/" target="_blank">
-              <img alt="Whole Foods" src=<%=require("./images/sponsors/wholefoods.png")%>></a>
+              <img alt="Whole Foods" src=<%=require( "./images/sponsors/wholefoods.png")%>></a>
             <a href="https://www.pandaexpress.com/" target="_blank">
               <img alt="Panda Express" src=<%=require( "./images/sponsors/panda-express.png")%>></a>
             <a href="https://www.redbull.com/us-en/" target="_blank">
@@ -574,7 +688,7 @@ mentors and sponsors as well as from my fellow pioneering students from college 
             </div>
             <div class="card--faq">
               <h4>I'd like to help out!</h4>
-              <p>If you're interested in volunteering for this year's hackathon, sign up 
+              <p>If you're interested in volunteering for this year's hackathon, sign up
                 <a href="https://cruzhacks2018.typeform.com/to/N2bUeA">here</a>!
               </p>
             </div>
