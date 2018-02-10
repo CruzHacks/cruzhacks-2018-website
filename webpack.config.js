@@ -70,6 +70,20 @@ module.exports = {
       },
       template: './src/index.html'
     }),
+    new HtmlWebpackPlugin({
+      title: 'CruzHacks 2018 | Winners',
+      favicon: __dirname + '/src/images/favicon.png',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeScriptTypeAttributes: true,
+        removeAttributeQuotes: true,
+        useShortDoctype: true,
+        minifyCSS: true
+      },
+      template: './src/winners.html',
+      filename: 'winners.html'
+    }),
     new ExtractTextPlugin({
       filename: 'style.[contenthash].css'
     }),

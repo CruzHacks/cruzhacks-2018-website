@@ -743,6 +743,15 @@ nav {
     .card:nth-child(2) {
       margin: 0; 
     }
+    &__winners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .card {
+        width: 60%;
+        height: initial;
+      }
+    }
   }
   &--faq {
     margin: 17px 0;

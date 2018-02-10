@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv=x-ua-compatible content="ie=edge">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="CruzHacks 2018">
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Create, shape, and build with over 700 people in Santa Cruz's biggest hackathon.">
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website">
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="http://www.cruzhacks.com/1cf96712d81521ba0e0e4b6bda3cb48d.jpg">
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://cruzhacks.com/">
+  <meta prefix="og: http://ogp.me/ns#" property="og:secure_url" content="https://cruzhacks.com/">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <!-- Hotjar Tracking Code for https://cruzhacks.com/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 734013,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header--wrapper">
+      <a class="hash-link" href="#">CruzHacks</a>
+      <nav>
+        <ul class="hide-mobile">
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#about">About</a>
+          </li>
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#stories">Stories</a>
+          </li>
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#sponsors">Sponsors</a>
+          </li>
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#schedule">Schedule</a>
+          </li>
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#faq">FAQ</a>
+          </li>
+          <li>
+            <a class="hash-link" href="http://cruzhacks.com/#team">Team</a>
+          </li>
+          <li>
+            <a class="social-link" href="https://facebook.com/cruzhacks" target="_blank">
+              <img height="17" src=<%=require( "./images/facebook.svg")%>></a>
+          </li>
+        </ul>
+        <a href="#" class="hamburger">Menu</a>
+      </nav>
+      <div class="mobile-nav hidden">
+        <div class="mobile-nav__wrapper">
+          <a href="#">CruzHacks</a>
+          <a href="#" class="hamburger__close">Close</a>
+          <ul>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#about">About</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#stories">Stories</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#sponsors">Sponsors</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#schedule">Schedule</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#faq">FAQ</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="hash-link" href="http://cruzhacks.com/#team">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="main-container">
+      <div id="winners" class="main-wrap">
+        <h2>CruzHacks Winners</h2>
+        <p id="cardtrigger">CruzHacks brings together a diverse and inclusive group of students and professionals to develop innovative solutions
+          to solve real world challenges. This year, we had over $25,000 in sponsor and in-house prizes. See the winners below:</p>
+        <div class="card--wrap__winners">
+          <div class="card">
+            <div class="card--col">
+              <h2>Innovation</h2>
+              <p>($250) <strong>1st. Zenbag</strong> — Maximilian Khan, Spencer Fricke<br>($100) <strong>2nd. Deep Shirt</strong> — Philipp Grulich, James Huang, Kevin Romero, Lennart Oldenburg, Lorenzo Selvatici<br>($50) <strong>3rd. Protein Viewer</strong> —  Brendan Wong, Maxim Kuznetsov, Pete Wilcox</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Tech Cares</h2>
+              <p>($250)
+                <strong>1st. Food Friends</strong> — Tiffany Luong, William Asper, Alexander Lue, Sherri Li
+                <br>($100)
+                <strong>2nd. CruzFire</strong> — Wuyuan Chen, Pranav Yerabati
+                <br>($50)
+                <strong>3rd. Navigation for Blind</strong> — Vivek Verma, Rohit Malhotra, Richa Malhotra</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Big Data Fed</h2>
+              <p>($300)
+                <strong>1st. Epsilon</strong> — Johannes Neubrand, Darpan Goyal, Sunshine Chong, Kerrie Lu
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Choose Santa Cruz</h2>
+              <p>(SCW Accelerator Program)
+                <strong>1st. Deep Shirt</strong> — Philipp Grulich, James Huang, Kevin Romero, Lennart Oldenburg, Lorenzo Selvatici
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Graduate Divison Prize</h2>
+              <p>($2000 Summer Fellowship)
+                <strong>1st. CruzFire</strong> — Wuyuan Chen, Pranav Yerabati
+              </p>
+              <p>($2000 Summer Fellowship)
+                <strong>2nd. March With Us</strong> — Thomas Ng, Verena Friedl, Robert Shelansky, Nedda Saremi
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Genomics Institute</h2>
+              <p>($200)
+                <strong>1st. SNPS</strong> — Joey Liao, Michael Chan, Barbosa Jones
+              </p>
+              <p>($200)
+                <strong>1st. Protein Viewer</strong> — Brendan Wong, Maxim Kuznetsov, Pete Wilcox
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Microsoft</h2>
+              <p>($500)
+                <strong>1st. Speech2Slug</strong> — Jurik Juraska, Nehal Bengre
+              </p>
+              <p>(Cortana Speaker)
+                <strong>2nd. Spitch Perfect</strong> — Scott Hung, Jiabei Luo, Pranav Raghavan, Juden Cyril Hoo
+              </p>
+              <p>(Cortana Speaker)
+                <strong>2nd. Storybook</strong> — Daniel Tjandra
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Google</h2>
+              <p>(Google Daydream & GCCs)
+                <strong>1st. Flu Season</strong> — Tiffany Thang, Shirley Huang
+              </p>
+              <p>(Google Daydream)
+                <strong>2nd. March With Us</strong> — Thomas Ng, Verena Friedl, Robert Shelansky, Nedda Saremi
+              </p>
+              <p>(Google Daydream)
+                <strong>3rd. Zenbag</strong> — Maximilian Khan, Spencer Fricke
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>UCSC Arts Division</h2>
+              <p>($1000)
+                <strong>1st. DefJamz</strong> — Ahyesha Russell, Chris Evens, Jeremy Lafond
+              </p>
+              <p>($500)
+                <strong>2nd. Zenbag</strong> — Maximilian Khan, Spencer Fricke
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>TokBox</h2>
+              <p>($250)
+                <strong>1st. Zenbag</strong> — Maximilian Khan, Spencer Fricke
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Hack Alumni</h2>
+              <p>(Drone)
+                <strong>1st. Tip of the Day</strong> — Emily Kobayashi, Justin Krupp, Xiao Qing Yu
+              </p>
+              <p>(Cat Ears)
+                <strong>2nd. DefJamz</strong> — Ahyesha Russell, Chris Evens, Jeremy Lafond
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>Project YX</h2>
+              <p>($1500)
+                <strong>1st. MAX</strong> — Heok Hong Low, Max Johansen, Ishan Dikshit, Nathan Elraj
+              </p>
+              <p>($500)
+                <strong>2nd. ICON</strong> — Ritik Batra, Ashwin Nathan, Avinash Jain, Vinay Senthil, Joe Zou
+              </p>
+              <p>($500)
+                <strong>2nd. Deep Shirt</strong> — Philipp Grulich, James Huang, Kevin Romero, Lennart Oldenburg, Lorenzo Selvatici
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>MLH</h2>
+              <p>($250 AWS)
+                <strong>AWS Prize. LangoLink</strong> — Bradley Puckett, Gian-Paolo-Paredes, Eric Mockler
+              </p>
+              <p>(410C Dragonboard)
+                <strong>IoT Prize. SlugSpace</strong> — Colby Leiske, Raul Lara, Matthew Herbert, JJ Serrano
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card--col">
+              <h2>SUA Diversity & Inclusion</h2>
+              <p>($25)
+                <strong>1st. DefJamz</strong> — Ahyesha Russell, Chris Evens, Jeremy Lafond
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <!--<div id="circle"></div>-->
+    <!--<div id="radar"></div>-->
+  </main>
+  <footer>
+    <div>
+      <p>©
+        <span class=year></span> CruzHacks. All rights reserved.</p>
+      <div class="social">
+        <a href="http://fb.me/cruzhacks">
+          <img src=<%=require( "./images/facebook.svg")%>></a>
+        <a href="https://www.twitter.com/CruzHacks">
+          <img src=<%=require( "./images/twitter.svg")%>></a>
+        <a href="mailto:akanthil@ucsc.edu">
+          <img height=30 src=<%=require( "./images/email.svg")%>></a>
+      </div>
+    </div>
+    <p>Made with ♥ in Santa Cruz by
+      <a href="https://linkedin.com/in/gregwwolff">Greg Wolff</p>
+  </footer>
+  <a id="mlh-trust-badge" class="nav-link" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
+    href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=black"
+    target="_blank">
+    <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season"
+      style="width:100%">
+  </a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
