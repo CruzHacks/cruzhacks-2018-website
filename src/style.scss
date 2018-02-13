@@ -691,6 +691,17 @@ nav {
   }
 }
 
+.winners-badge {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #f7b066, #ffe087);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+#winners {
+  text-align: center;
+}
+
 .card {
   width: 530px;
   height: 135px;
@@ -1176,6 +1187,11 @@ nav {
     text-transform: uppercase;
     color: white;
     border: 2px darken(white, 4%) solid;
+    transition: all .5s ease;
+    &:hover {
+      border: 2px #f0e1fb solid;
+      color: white;
+    }
   }
 }
 
