@@ -761,6 +761,9 @@ nav {
       .card {
         width: 60%;
         height: initial;
+        &--col {
+          padding: 0;
+        }
       }
     }
   }
